@@ -22,4 +22,4 @@
 
 ## Ссылки
 - [MindMap]()
-- [Макет](https://www.figma.com/file/zwzQGlIB1U46qjY872Gkqx/Untitled?type=design&node-id=0-1&mode=design&t=7MPyG1Jx3FIcYO2z-0)
+- [Макет](https://www.figma.com/file/zwzQGlIB1U46qjY872Gkqx/PsycologyTesting?type=design&node-id=0%3A1&mode=design&t=uka1j7sswddlOy0k-1)
