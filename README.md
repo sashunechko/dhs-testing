@@ -22,4 +22,4 @@
 
 ## Ссылки
 - [MindMap]()
-- [Макет]()
+- [Макет](https://www.figma.com/file/zwzQGlIB1U46qjY872Gkqx/Untitled?type=design&node-id=0-1&mode=design&t=7MPyG1Jx3FIcYO2z-0)
