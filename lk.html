@@ -7,7 +7,7 @@
 </head>
 <body>
     <form enctype="multipart/form-data" method="post">
-    <p><input type="file" name="photo" multiple accept="image/*,image/jpeg" style="position: absolute; left: 50px; top: 50px;">
+    <p><input type="file" name="photo" multiple accept="image/*,image/jpeg" style="position: absolute; left: 150px; top: 150px;">
     <p><input maxlength="25" size="40" placeholder="Имя" style="position: absolute; left: 900px; top: 50px;"></p>
     <p><input maxlength="25" size="40" placeholder="Фамилия" style="position: absolute; left: 900px; top: 150px;"></p>
     <button style="position: absolute; left: 1300px; top: 150px;">сохранить</button>
@@ -16,5 +16,16 @@
     <button style="position: absolute; left: 500px; top: 350px;">записи</button>
     <a href="">записаться</a>
     <input type="date" style="position: absolute; left: 500px; top: 400px;">
+
+    <form>
+        <p><input maxlength="25" size="20" placeholder="Имя"></p>
+        <p><input type="date"></p>
+        <select id="специалист" name="фио специалиста">
+            <option value="1">Иванов</option>
+            <option value="2">Петров</option>
+            <option value="3">Сидоров</option>
+        </select>
+        <p><button >отправить заявку</button></p>
+    </form>
 </body>
 </html>
