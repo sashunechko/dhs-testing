@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <title>PsycologyTesting</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -8,24 +9,26 @@
 <body>
     <form enctype="multipart/form-data" method="post">
     <p><input type="file" name="photo" multiple accept="image/*,image/jpeg" style="position: absolute; left: 150px; top: 150px;">
+
     <p><input maxlength="25" size="40" placeholder="Имя" style="position: absolute; left: 900px; top: 50px;"></p>
     <p><input maxlength="25" size="40" placeholder="Фамилия" style="position: absolute; left: 900px; top: 150px;"></p>
     <button style="position: absolute; left: 1300px; top: 150px;">сохранить</button>
     <button style="position: absolute; left: 1300px; top: 50px;">редактировать</button>
+
     <button style="position: absolute; left: 100px; top: 350px;">результаты</button>
     <button style="position: absolute; left: 500px; top: 350px;">записи</button>
-    <a href="">записаться</a>
     <input type="date" style="position: absolute; left: 500px; top: 400px;">
-
-    <form>
-        <p><input maxlength="25" size="20" placeholder="Имя"></p>
+    <p style="position: absolute; left: 1100px; top: 350px;"><a href="">записаться</a></p>
+    
+    <form action="" method="get">
+        <p><input type="text" maxlength="25" size="20" placeholder="Имя"></p>
         <p><input type="date"></p>
         <select id="специалист" name="фио специалиста">
             <option value="1">Иванов</option>
             <option value="2">Петров</option>
             <option value="3">Сидоров</option>
         </select>
-        <p><button >отправить заявку</button></p>
+        <p><button type="submit">отправить заявку</button></p>
     </form>
 </body>
 </html>
