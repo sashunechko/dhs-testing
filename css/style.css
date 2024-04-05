@@ -1,0 +1,224 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* inter-regular - cyrillic_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/inter-v13-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* inter-500 - cyrillic_latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/inter-v13-cyrillic_latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* inter-800 - cyrillic_latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/inter-v13-cyrillic_latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  html{
+    box-sizing: border-box;
+  }
+  *, *::before, *::after{
+    box-sizing: inherit;
+  }
+  body{
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: normal;
+    color:#374375;
+    background-color: #BABCE2;
+  }
+
+  .wrapper{
+    max-width: 1295px;
+    margin: 0 auto;
+  }
+
+  /*header styles start*/
+  .header{
+    background-color: #374375;
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+  }
+
+  .header-wrapper{
+    display: flex;
+    flex-wrap:wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .nav-list{
+    display: flex;
+    flex-wrap:wrap;
+  }
+
+  .link-contrast{
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+    margin-right: 82px;
+    text-decoration: none;
+  }
+  
+  .link-contrast:hover, .link-contrast:focus, .link-contrast:active{
+    opacity: .75;
+  }
+  /*header styles end*/
+
+  /* card 1 start*/
+  .main-content{
+    padding-top: 179px;
+    padding-left: 73px;
+  }
+  .card1{
+    border-radius: 71px;
+    width: 1295px;
+    height: 720px;
+    box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: rgba(255, 252, 245, 0.27);
+    display: flex;
+    flex-wrap:wrap;
+    margin-bottom: 135px;
+  }
+  .h1{
+    padding-top: 147px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 64px;
+    text-align: justify;
+    margin-bottom: 48px;
+  }
+  .text1{
+    font-weight: 500;
+    font-size: 32px;
+    max-width: 566px;
+    text-align: justify;
+  }
+  /* card 1 end*/
+
+  .h{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 71px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 64px;
+    text-align: center;
+  }
+  .text2{
+    margin-top: 69px;
+    margin-left: 54px;
+    font-weight: 500;
+    font-size: 32px;
+    text-align: justify;
+    max-width: 367px;
+  }
+  .girl{
+    align-content: center;
+  }
+  .link-button{
+    margin-top: 179px;
+    width: 367px;
+    height: 92px;
+    filter: blur(4px);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #374375;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .link-contrast-button{
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .link-contrast-button, .link-contrast:focus, .link-contrast:active{
+    opacity: .75;
+  }
+  .link-button1{
+    margin-left: 54px;
+    width: 367px;
+    height: 92px;
+    filter: blur(4px);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #374375;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 47px;
+  }
+  .text3{
+    margin-left: 54px;
+    font-weight: 500;
+    font-size: 32px;
+    text-align: justify;
+    max-width: 493px;
+  }
+  .content3{
+    margin-top: 69px;
+    display: flex;
+    flex-direction:column;
+  }
+  
