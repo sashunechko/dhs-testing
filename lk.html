@@ -1,34 +1,64 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>PsycologyTesting</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PsycologyTesting</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <form enctype="multipart/form-data" method="post">
-    <p><input type="file" name="photo" multiple accept="image/*,image/jpeg" style="position: absolute; left: 150px; top: 150px;">
-
-    <p><input maxlength="25" size="40" placeholder="Имя" style="position: absolute; left: 900px; top: 50px;"></p>
-    <p><input maxlength="25" size="40" placeholder="Фамилия" style="position: absolute; left: 900px; top: 150px;"></p>
-    <button style="position: absolute; left: 1300px; top: 150px;">сохранить</button>
-    <button style="position: absolute; left: 1300px; top: 50px;">редактировать</button>
-
-    <button style="position: absolute; left: 100px; top: 350px;">результаты</button>
-    <button style="position: absolute; left: 500px; top: 350px;">записи</button>
-    <input type="date" style="position: absolute; left: 500px; top: 400px;">
-    <p style="position: absolute; left: 1100px; top: 350px;"><a href="">записаться</a></p>
-    
-    <form action="" method="get">
-        <p><input type="text" maxlength="25" size="20" placeholder="Имя"></p>
-        <p><input type="date"></p>
-        <select id="специалист" name="фио специалиста">
-            <option value="1">Иванов</option>
-            <option value="2">Петров</option>
-            <option value="3">Сидоров</option>
-        </select>
-        <p><button type="submit">отправить заявку</button></p>
-    </form>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header-wrapper">
+            <img src="./img/svg/logo.svg" alt="Логотип. PsycologyTesting" class="header-logo-pic"/>
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li><a class="link-contrast" href="#01">ТЕСТЫ</a></li>
+                </ul>
+            </nav>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="wrapper">
+            <div class="bio">
+                <div class="photo">
+                    <div class="bg-photo">
+                        <img src="./img/svg/person.svg" alt="Иконка фото профиля" />
+                    </div>
+                </div>
+                
+                <div class="bg-bio">
+                    <div class="info">
+                        <input class="box" type="text" placeholder="Фамилия Имя" name="name" required/>
+                        <input class="box" type="date" placeholder="дд.мм.гггг" name="date" required/>
+                        <button class="red-button" style="margin-left: 102px;" type="submit" form="id-info">сохранить изменения</button>
+                    </div> 
+                </div>
+            </div>
+            <button class="button" type="submit" form="id-info" style="margin-right: 395px;">
+                <input type="file" id="imageInput" accept="image/*" />
+            </button>
+            <button class="button" >
+                <p style="font-weight: 500;
+                font-size: 24px;
+                text-align: center;
+                color: #fffcf5;">редактировать данные</p>
+            </button>
+        </div>
+    </main>
+    <nav class="nav-lk">
+        
+        <button class="link-button"> 
+            <p class="link-contrast-button" >РЕЗУЛЬТАТЫ</p>
+        </button>
+        <button class="link-button"> 
+            <p class="link-contrast-button" >ЗАПИСИ</p>
+        </button>
+        <button class="link-button"> 
+            <a class="link-contrast-button" href="#запись">ЗАПИСАТЬСЯ</a>
+        </button>
+        
+    </nav>
 </body>
 </html>

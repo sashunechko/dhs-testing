@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PsycologyTesting</title>
+    <link rel="stylesheet" href="./css/style1.css">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+            <div class="header-wrapper">
+            <img src="./img/svg/logo.svg" alt="Логотип. PsycologyTesting" class="header-logo-pic"/>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="bio">
+            <div class="bg-record">
+                <div class="info">
+                    <input class="box1" type="text" placeholder="Фамилия Имя" name="name" required/>
+                    <input class="box1" type="number" placeholder="+7(999)999 99 99" name="phone" required/>
+                    <input class="box1" type="date" placeholder="дд.мм.гггг" name="date" required/>
+                    <input class="box1" type="time" placeholder="12-00" name="time" min="09:00" max="18:00" required/>
+                    <select class="box1" id="специалист" name="фио специалиста">
+                        <option value="1">Иванов</option>
+                        <option value="2">Петров</option>
+                        <option value="3">Сидоров</option>
+                    </select>
+                    <button class="red-button" type="submit" form="id-info">записаться</button>
+                </div>
+            </div>
+            <img src="./img/svg/record.svg" alt="Улыбающаяся девушка на фоне листьев" />
+        </div>
+    </main>
+</body>
+</html>
