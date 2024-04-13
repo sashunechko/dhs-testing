@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Main } from './pages/main'
 
-import './style/main.css'
+import '../../css/style.css'
 
 const App = () => {
   return (
