@@ -2,14 +2,24 @@
   "name": "dhs-testing",
   "version": "1.0.0",
   "description": "проект позволяет пройти психологические тесты и записаться к специалисту\r ## MVP1\r Главная страница(Харитонова Александра):\r 1) виджеты\r 2) общая информация",
-  "main": "index.js",
+  "main": "./src/index.tsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ijl-cli server --port=8099 --with-open-browser",
+    "build": "npm run clean && ijl-cli build --dev",
+    "build:prod": "npm run clean && ijl-cli build",
+    "clean": "rimraf dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ijl/cli": "^5.1.0"
+    "@ijl/cli": "^5.1.0",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
+    "express": "^4.19.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.4.4"
   }
 }
