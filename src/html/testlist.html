@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/testlist.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -16,27 +16,32 @@
 
 <body>
     <header class="header">
-        <img height="85p" width="310p" src="../img/logo.png" align="left" alt="Логотип. Psychology testing."/>
-        <nav class="nav-list">
-            <ul class="ul">
-                <li><a class="link link-contrast" href="">Тесты</a></li>
-                <li><a class="link link-contrast" href="">Личный кабинет</a></li>
-            </ul>
-        </nav> 
+        <div class="wrapper">
+            <div class="header-wrapper">
+            <img src="../img/svg/logo.svg" alt="Логотип. PsycologyTesting" class="header-logo-pic"/>
+            <nav class="header-nav">
+                <ul class="nav-list">
+                    <li><a class="link-contrast" href="#01">ТЕСТЫ</a></li>
+                    <li><a class="link-contrast" href="#02">ЛИЧНЫЙ КАБИНЕТ</a></li>
+                </ul>
+            </nav>
+            </div>
+        </div>
     </header>
 
-    <p class="aligncenter">
-        <img src="../img/header.jpg" alt="Девушка разговаривает с психологом." width="942" height="460" />
+    <p class="pic">
+        <img src="../img/header.jpg" alt="Девушка разговаривает с психологом." width="60%";
+        height="420px"/>
     </p>
 
-    <h1 align="center">ТЕСТЫ ОНЛАЙН</h1>
+    <h1 class="hh">ТЕСТЫ ОНЛАЙН</h1>
 
-    <form align="center" action="" method="get">
-        <input name="s" placeholder="Поиск по тестам..." type="search">
-        <button type="submit">Поиск</button>
+    <form class="search-form">
+        <input placeholder="Поиск по тестам..." type="search" class="search-input">
+        <button type="submit" class="search-button">Найти</button>
     </form>
 
-    <p>
+    <p class="sort">
         <label for="filter">Фильтр</label>
         <select id="filter" name="filter">
             <option value="Диагностика расстройств">Диагностика расстройств</option>
@@ -103,10 +108,19 @@
     </div>
 
 </div>
-<footer class="page-footer">
-        <p>Александра Харитонова</p>
-        <p >Дарья Ханаева</p>
-    <a class="link-contrast" href="https://github.com/sashunechko/dhs-testing" >GitHub</a>
+
+<footer class="footer">
+    <div class="wrapper">
+        <div class="header-wrapper">
+        <img src="../img/svg/logo.svg" alt="Логотип. PsycologyTesting" class="header-logo-pic">
+        <div class="footer-wrapper">
+            <p class="text">created by</p>
+            <a href="https://github.com/sashunechko/dhs-testing">
+                <img src="../img/svg/git.svg" alt="Логотип. Github" class="header-logo-pic">
+            </a>
+        </div>
+        </div>
+    </div>
 </footer>
 
 </body>
