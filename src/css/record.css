@@ -71,9 +71,14 @@ table {
     margin: 0 auto;
   }
 
+  .nav-list{
+    display: flex;
+    flex-wrap:wrap;
+  }
+
   /*header styles start*/
   .header{
-    background-color: #374375;
+    background-color: var(--main);
     position: fixed;
     top:0;
     left:0;
@@ -86,6 +91,17 @@ table {
     align-items: flex-end;
     justify-content: space-between;
   }
+
+  .link-contrast{
+    font-family: 'Inter';
+    font-weight: 500;
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+    margin-right: 82px;
+    text-decoration: none;
+  }
+
   .main-content{
     padding-top: 120px;
   }
@@ -104,6 +120,15 @@ table {
     height: 400px;
     background: #fffcf5;
   }
+
+  .bg-reg{
+    border-radius: 69px;
+    width: 700px;
+    height: 400px;
+    background: var(--main-transparent);
+    text-align: center;
+  }
+
   .button{
     margin-left: 40px;
     width: 310px;
