@@ -172,7 +172,7 @@ table {
       border: 1px solid;
       margin-left: 1%;
       margin-bottom: 5%;
-      background: var(--text-contrast);
+      background: var(--main-transparent);
     }
   
   .link-contrast:hover, .link-contrast:focus, .link-contrast:active{
@@ -250,16 +250,16 @@ table {
 
  .search-button {
   position: absolute; 
-  top: 5.5px;
   right: 0px;
   width: 84px;
   height: 42px;
   border: 2px solid;
   color: (var(--main));
-  background: var(--main-transparent);
+  background: var(--text-contrast);
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
+
 .search-button:before {
   font-size: 10px;
   color: (var(--main));
@@ -279,7 +279,7 @@ text-align: center;
   border: 2px solid;
   border-radius: 5px;
   outline: none;
-  background: var(--main-transparent);
+  background: var(--text-contrast);
   color: var(--main);
 }
 

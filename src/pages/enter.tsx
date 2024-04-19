@@ -1,8 +1,10 @@
 import React from "react";
 
-export const Reg = () => {
+export const Enter = () => {
   return (
     <>
+<title>Вход</title>
+<body>
     <header className="header">
         <div className="wrapper">
             <div className="header-wrapper">
@@ -19,13 +21,13 @@ export const Reg = () => {
 
     <div className="reg">
             <div className="bg-reg">
-                <h1 className="hh">Регистрация</h1>
+                <h1 className="hh">Вход</h1>
                 <div className="reg-info">
                     <input className="box1" type="email" placeholder="Email" name="email" required/>
                     <input className="box1" type="password" placeholder="Пароль" name="password" required/>
-                    <button className="red-button" type="submit" form="id-info">Зарегистрироваться</button>
+                    <button className="red-button" type="submit" form="id-info">Войти</button>
                 </div>
-                <a href="">Вход</a>
+                <a href="">Регистрация</a>
             </div>
     </div>
 
@@ -42,7 +44,9 @@ export const Reg = () => {
         </div>
     </div>
 </footer>
+
+</body>
     </>
   );
 };
-export default Reg;
+export default Enter;
