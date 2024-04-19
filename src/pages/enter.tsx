@@ -1,5 +1,8 @@
 import React from "react";
 
+import { logo} from '../img';
+import { git} from '../img';
+
 export const Enter = () => {
   return (
     <>
@@ -8,7 +11,7 @@ export const Enter = () => {
     <header className="header">
         <div className="wrapper">
             <div className="header-wrapper">
-            <img src="../img/svg/logo.svg" alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
+            <img src={logo} alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
             <nav className="header-nav">
                 <ul className="nav-list">
                     <li><a className="link-contrast" href="#01">ТЕСТЫ</a></li>
@@ -38,7 +41,7 @@ export const Enter = () => {
         <div className="footer-wrapper">
             <p className="text">created by</p>
             <a href="https://github.com/sashunechko/dhs-testing">
-                <img src="../img/svg/git.svg" alt="Логотип. Github" className="header-logo-pic"/>
+                <img src={git} alt="Логотип. Github" className="header-logo-pic"/>
             </a>
         </div>
         </div>

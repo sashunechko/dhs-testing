@@ -1,12 +1,16 @@
 import React from "react";
 
+import { logo} from '../img';
+import { record} from '../img';
+import { git} from '../img';
+
 export const Rec = () => {
   return (
     <>
     <header className="header">
         <div className="wrapper">
             <div className="header-wrapper">
-            <img src="../img/svg/logo.svg" alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
+            <img src={logo} alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
             <nav className="header-nav">
                 <ul className="nav-list">
                     <li><a className="link-contrast" href="#01">ТЕСТЫ</a></li>
@@ -32,17 +36,17 @@ export const Rec = () => {
                     <button className="red-button" type="submit" form="id-info">записаться</button>
                 </div>
             </div>
-            <img src="../img/svg/record.svg" alt="Улыбающаяся девушка на фоне листьев" width="50%" />
+            <img src={record} alt="Улыбающаяся девушка на фоне листьев" width="50%" />
         </div>
     </main>
     <footer className="footer">
     <div className="wrapper">
         <div className="header-wrapper">
-        <img src="../img/svg/logo.svg" alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
+        <img src={logo} alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
         <div className="footer-wrapper">
             <p className="text">created by</p>
             <a href="https://github.com/sashunechko/dhs-testing">
-                <img src="../img/svg/git.svg" alt="Логотип. Github" className="header-logo-pic"/>
+                <img src={git} alt="Логотип. Github" className="header-logo-pic"/>
             </a>
         </div>
         </div>

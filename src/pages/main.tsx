@@ -1,12 +1,18 @@
 import React from "react";
 
+import { logo} from '../img';
+import { lotos} from '../img';
+import { girl} from '../img';
+import { psyho} from '../img';
+import { git} from '../img';
+
 export const Main = () => {
   return (
     <>
     <header className="header">
         <div className="wrapper">
             <div className="header-wrapper">
-            <img src="../img/svg/logo.svg" alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
+            <img src={logo} alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
             <nav className="header-nav">
                 <ul className="nav-list">
                     <li><a className="link-contrast" href="#01">ТЕСТЫ</a></li>
@@ -20,7 +26,7 @@ export const Main = () => {
     <main className="main-content">
         <div className="wrapper">
         <section className="card1">
-            <img src="../img/svg/lotos.svg" alt="девушка в позе лотоса" />
+            <img src={lotos} alt="девушка в позе лотоса" />
             <div className="wrapper">
                     <h1 className="h1">О САЙТЕ</h1>
                     <p className="text1">
@@ -43,7 +49,7 @@ export const Main = () => {
                 скрытые таланты, а также понять свои сильные 
                 и слабые стороны. 
             </p>
-            <img className="girl" src="../img/svg/girl.svg" alt="Спокойная девушка" />
+            <img className="girl" src={girl} alt="Спокойная девушка" />
             <button className="link-button"> 
                 <a className="link-contrast-button" href="#03">К ТЕСТАМ!</a>
             </button>
@@ -56,7 +62,7 @@ export const Main = () => {
                 </button>
             <p className="text3">дает возможность: сохранять и просматривать результаты тестирований, записываться  к специалисту, следить за графиком консультаций</p>
             </div>
-            <img src="../img/svg/psyho.svg" alt="Консультация психолога" />
+            <img src={psyho} alt="Консультация психолога" />
         </section>
         </div>
     </main>
@@ -64,11 +70,11 @@ export const Main = () => {
     <footer className="footer">
         <div className="wrapper">
             <div className="header-wrapper">
-            <img src="../img/svg/logo.svg" alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
+            <img src={logo} alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
             <div className="footer-wrapper">
                 <p className="text">created by</p>
                 <a href="https://github.com/sashunechko/dhs-testing">
-                    <img src="../img/svg/git.svg" alt="Логотип. Github" className="header-logo-pic"/>
+                    <img src={git} alt="Логотип. Github" className="header-logo-pic"/>
                 </a>
             </div>
             </div>

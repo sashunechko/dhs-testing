@@ -1,12 +1,16 @@
 import React from "react";
 
+import { logo} from '../img';
+import { person} from '../img';
+import { git} from '../img';
+
 export const Lk = () => {
   return (
     <>
     <header className="header">
         <div className="wrapper">
             <div className="header-wrapper">
-            <img src="../img/svg/logo.svg" alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
+            <img src={logo} alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
             <nav className="header-nav">
                 <ul className="nav-list">
                     <li><a className="link-contrast" href="#01">ТЕСТЫ</a></li>
@@ -20,7 +24,7 @@ export const Lk = () => {
             <div className="bio">
                 <div className="photo">
                     <div className="bg-photo">
-                        <img src="../img/svg/person.svg" alt="Иконка фото профиля" />
+                        <img src={person} alt="Иконка фото профиля" />
                     </div>
                 </div>
                 
@@ -56,11 +60,11 @@ export const Lk = () => {
     <footer className="footer">
     <div className="wrapper">
         <div className="header-wrapper">
-        <img src="../img/svg/logo.svg" alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
+        <img src={logo} alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
         <div className="footer-wrapper">
             <p className="text">created by</p>
             <a href="https://github.com/sashunechko/dhs-testing">
-                <img src="../img/svg/git.svg" alt="Логотип. Github" className="header-logo-pic"/>
+                <img src={git} alt="Логотип. Github" className="header-logo-pic"/>
             </a>
         </div>
         </div>
