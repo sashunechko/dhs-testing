@@ -412,3 +412,9 @@ text-align: center;
     justify-content:space-between;
     max-width: 1297px;
   }
+  .text-button-mini{
+    font-weight: 500;
+    font-size: 24px;
+    text-align: center;
+    color: #fffcf5;
+  }
