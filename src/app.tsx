@@ -14,9 +14,9 @@ const App = () => {
     // <Main />
     // <Lk/>
     // <Rec/>
-    // <Reg/>
+    <Reg/>
     // <Enter/>
-   <Testlist />
+  //  <Testlist />
   );
 };
 
