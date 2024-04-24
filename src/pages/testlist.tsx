@@ -2,26 +2,16 @@ import React from "react";
 
 import '../css/style.css';
 
-import { logo} from '../img';
+import {Header} from "../components/header";
+import {Footer} from "../components/footer";
+
 import { header} from '../img';
-import { git} from '../img';
 
 export const Testlist = () => {
   return (
     <>
-    <header className="header">
-        <div className="wrapper">
-            <div className="header-wrapper">
-            <img src={logo} alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
-            <nav className="header-nav">
-                <ul className="nav-list">
-                    <li><a className="link-contrast" href="#01">ТЕСТЫ</a></li>
-                    <li><a className="link-contrast" href="#02">ЛИЧНЫЙ КАБИНЕТ</a></li>
-                </ul>
-            </nav>
-            </div>
-        </div>
-    </header>
+
+    <Header/>
 
     <p className="pic">
         <img src={header} alt="Девушка разговаривает с психологом." width="60%"
@@ -103,19 +93,8 @@ export const Testlist = () => {
 
 </div>
 
-<footer className="footer">
-    <div className="wrapper">
-        <div className="header-wrapper">
-        <img src={logo} alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
-        <div className="footer-wrapper">
-            <p className="text">created by</p>
-            <a href="https://github.com/sashunechko/dhs-testing">
-                <img src={git} alt="Логотип. Github" className="header-logo-pic"/>
-            </a>
-        </div>
-        </div>
-    </div>
-</footer>
+<Footer/>
+
 </>
   );
 };

@@ -8,6 +8,7 @@ import { Reg } from './pages/registration'
 import { Enter } from './pages/enter'
 import './css/style.css'
 import './css/record.css'
+
 const App = () => {
   return (
     <Main />

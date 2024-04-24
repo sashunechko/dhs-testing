@@ -1,24 +1,16 @@
 import React from "react";
 
-import { logo} from '../img';
+import {Header} from "../components/header";
+import {Footer} from "../components/footer";
+
 import { person} from '../img';
-import { git} from '../img';
 
 export const Lk = () => {
   return (
     <>
-    <header className="header">
-        <div className="wrapper">
-            <div className="header-wrapper">
-            <img src={logo} alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
-            <nav className="header-nav">
-                <ul className="nav-list">
-                    <li><a className="link-contrast" href="#01">ТЕСТЫ</a></li>
-                </ul>
-            </nav>
-            </div>
-        </div>
-    </header>
+
+    <Header/>
+
     <main className="main-content">
         <div className="wrapper">
             <div className="bio">
@@ -57,19 +49,9 @@ export const Lk = () => {
         </button>
         
     </nav>
-    <footer className="footer">
-    <div className="wrapper">
-        <div className="header-wrapper">
-        <img src={logo} alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
-        <div className="footer-wrapper">
-            <p className="text">created by</p>
-            <a href="https://github.com/sashunechko/dhs-testing">
-                <img src={git} alt="Логотип. Github" className="header-logo-pic"/>
-            </a>
-        </div>
-        </div>
-    </div>
-</footer>
+    
+    <Footer/>
+
     </>
   );
 };
