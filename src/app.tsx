@@ -11,12 +11,12 @@ import './css/record.css'
 
 const App = () => {
   return (
-    <Main />
+    // <Main />
     // <Lk/>
     // <Rec/>
     // <Reg/>
     // <Enter/>
-  //  <Testlist />
+   <Testlist />
   );
 };
 

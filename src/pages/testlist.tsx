@@ -4,6 +4,7 @@ import '../css/style.css';
 
 import {Header} from "../components/header";
 import {Footer} from "../components/footer";
+import {List} from "../components/list-of-tests";
 
 import { header} from '../img';
 
@@ -42,56 +43,7 @@ export const Testlist = () => {
 
     </p>
 
-    <div className="table">
-    <div className="rectangle text_center">
-        <a href="">Тест на самооценку</a>
-    </div>
-
-    <div className="rectangle text_center">
-        <a href="">Какой у Вас тип мышления?</a>
-    </div>
-
-    <div className="rectangle text_center">
-        <a href="">Экспресс IQ-тест</a>
-    </div>
-
-    <div className="rectangle text_center">
-        <a href="">Определение уровня депрессии</a>
-    </div>
-
-    <div className="rectangle text_center">
-        <a href="">Есть ли у Вас РПП?</a>
-    </div>
-
-    <div className="rectangle text_center">
-        <a href="">Тест на скрытый нарциссизм</a>
-    </div>
-
-    <div className="rectangle text_center">
-        <a href="">Диагностика выгорания</a>
-    </div>
-
-    <div className="rectangle text_center">
-        <a href="">Тест на уверенность в себе</a>
-    </div>
-
-    <div className="rectangle text_center">
-        <a href="">Диагностика ОКР</a>
-    </div>
-
-    <div className="rectangle text_center">
-        <a href="">Насколько Вы тревожны?</a>
-    </div>
-
-    <div className="rectangle text_center">
-        <a href="">Тест на СДВГ</a>
-    </div>
-
-    <div className="rectangle text_center">
-        <a href="">Ваш тип привязанности</a>
-    </div>
-
-</div>
+    <List/>
 
 <Footer/>
 
