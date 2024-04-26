@@ -1,6 +1,13 @@
 import React from "react";
 
 import {Header} from "../components/header";
+import {Image1} from "../components/im1";
+import {TextBlock1} from "../components/tb1";
+import {Title} from "../components/title";
+import {Par1} from "../components/paragraph1";
+import {Par2} from "../components/par2";
+import {Button} from "../components/button";
+import {RegButton} from "../components/regbutt";
 import {Footer} from "../components/footer";
 
 import { lotos} from '../img';
@@ -15,43 +22,25 @@ export const Main = () => {
     <main className="main-content">
         <div className="wrapper">
         <section className="card1">
-            <img src={lotos} alt="девушка в позе лотоса" />
-            <div className="wrapper">
-                    <h1 className="h1">О САЙТЕ</h1>
-                    <p className="text1">
-                        Добро пожаловать на сайт, 
-                        посвященный психологическим 
-                        тестам! Здесь вы найдете широкий 
-                        выбор тестов, которые помогут 
-                        вам лучше понять себя, свои 
-                        эмоции, поведение и отношения 
-                        с окружающими.
-                    </p>
-            </div>
+        <Image1 src={lotos} alt="девушка в позе лотоса" />
+        <TextBlock1
+            title="О САЙТЕ"
+            description="Добро пожаловать на сайт, посвященный психологическим тестам! Здесь вы найдете широкий выбор тестов, которые помогут вам лучше понять себя, свои эмоции, поведение и отношения с окружающими."
+        />
         </section>
         <section className="card1">
-            <h1 className="h">ОНЛАЙН ПСИХОЛОГИЧЕСКИЕ ТЕСТЫ</h1>
-            <p className="text2">
-                Психологические тесты – это мощный 
-                инструмент для самопознания. 
-                Они помогают выявить личностные черты, 
-                скрытые таланты, а также понять свои сильные 
-                и слабые стороны. 
-            </p>
-            <img className="girl" src={girl} alt="Спокойная девушка" />
-            <button className="link-button"> 
-                <a className="link-contrast-button" href="#03">К ТЕСТАМ!</a>
-            </button>
+            <Title text="ОНЛАЙН ПСИХОЛОГИЧЕСКИЕ ТЕСТЫ" />
+            <Par1 text="Психологические тесты – это мощный инструмент для самопознания. Они помогают выявить личностные черты, скрытые таланты, а также понять свои сильные и слабые стороны." />
+            <Image1 src={girl} alt="Спокойная девушка" />
+            <Button text="К ТЕСТАМ!" href="#03" />
         </section>
         <section className="card1">
-            <h1 className="h">РЕГИСТРАЦИЯ И КОНСУЛЬТАЦИИ</h1>
+            <Title text="РЕГИСТРАЦИЯ И КОНСУЛЬТАЦИИ" />
             <div className="content3">
-                <button className="link-button1">
-                    <a className="link-contrast-button" href="#04">РЕГИСТРАЦИЯ</a>
-                </button>
-            <p className="text3">дает возможность: сохранять и просматривать результаты тестирований, записываться  к специалисту, следить за графиком консультаций</p>
+                <RegButton text="РЕГИСТРАЦИЯ" href="#04" />
+                <Par2 text="дает возможность: сохранять и просматривать результаты тестирований, записываться к специалисту, следить за графиком консультаций" />
             </div>
-            <img src={psyho} alt="Консультация психолога" />
+            <Image1 src={psyho} alt="Консультация психолога" />
         </section>
         </div>
     </main>

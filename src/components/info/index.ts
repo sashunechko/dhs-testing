@@ -1,0 +1,1 @@
+export {InfoForm} from './info'

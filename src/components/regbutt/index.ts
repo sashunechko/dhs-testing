@@ -1,0 +1,1 @@
+export {RegButton} from './regbutt'
