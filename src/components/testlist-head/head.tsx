@@ -1,18 +1,17 @@
 import React from "react"
 
+import {StyledImg, StyledText} from "./head.styled";
+
 import { header} from '../../img';
 
-export class Head extends React.Component{
-    render(){
+export function Head() {
         return (
             <>
-            <p className="pic">
-                <img src={header} alt="Девушка разговаривает с психологом." width="60%"
-                height="420px"/>
-            </p>
+            <StyledImg>
+                <img src={header} alt="Девушка разговаривает с психологом." width="60%" height="420px"/>
+            </StyledImg>
 
-            <h1 className="hh">ТЕСТЫ ОНЛАЙН</h1>
-                    </>
-                    )
-            }
+            <StyledText>ТЕСТЫ ОНЛАЙН</StyledText>
+            </>
+        )
 }

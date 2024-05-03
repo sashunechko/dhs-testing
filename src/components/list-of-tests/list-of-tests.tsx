@@ -1,5 +1,7 @@
 import React from "react"
 
+import {Table, StyledRectangle} from "./list-of-tests.styled";
+
 const data = [
     "Тест на самооценку",
     "Какой у Вас тип мышления?",
@@ -16,19 +18,17 @@ const data = [
 ]
 
 const listTests = data.map(test => 
-    <div className="rectangle text_center">
+    <StyledRectangle>
         <a href="">{test}</a>
-    </div>
+    </StyledRectangle>
 );
 
-export class List extends React.Component{
-    render() {
+export function List() {
         return (
             <>
-                <div className="table">
+                <Table>
                     {listTests}         
-                </div>
+                </Table>
             </>
         )
-    }
 }

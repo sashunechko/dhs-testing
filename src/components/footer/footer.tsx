@@ -1,25 +1,26 @@
 import React from "react"
 
+import { Wrapper, HeaderWrapper, StyledFooter, FooterWrapper, Text} from "./footer.styled";
+
 import {git} from '../../img';
 import {logo} from '../../img';
 
-export class Footer extends React.Component{
-    render(){
+export function Footer() {
         return (
             <>
-                <footer className="footer">
-        <div className="wrapper">
-            <div className="header-wrapper">
-            <img src={logo} alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
-            <div className="footer-wrapper">
-                <p className="text">created by</p>
-                <a href="https://github.com/sashunechko/dhs-testing">
-                    <img src={git} alt="Логотип. Github" className="header-logo-pic"/>
-                </a>
-            </div>
-            </div>
-        </div>
-    </footer>
-            </>)
-    }
+            <StyledFooter>
+                <Wrapper>
+                    <HeaderWrapper>
+                    <img src={logo} alt="Логотип. PsycologyTesting"/>
+                    <FooterWrapper>
+                        <Text>created by</Text>
+                        <a href="https://github.com/sashunechko/dhs-testing">
+                            <img src={git} alt="Логотип. Github"/>
+                        </a>
+                    </FooterWrapper>
+                    </HeaderWrapper>
+                </Wrapper>
+            </StyledFooter>
+            </>
+        )
 }

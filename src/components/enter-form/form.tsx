@@ -1,19 +1,21 @@
 import React from "react"
 
+import { StyledBg, StyledForm, StyledButton, StyledHeader, StyledInfo, StyledInput} from "./form.styled";
+
 export function Form(props) {
     return (
         <>
-        <div className="reg">
-              <div className="bg-reg">
-                  <h1 className="hh">{props.first}</h1>
-                  <div className="reg-info">
-                      <input className="box1" type="email" placeholder="Email" name="email" required/>
-                      <input className="box1" type="password" placeholder="Пароль" name="password" required/>
-                      <button className="red-button" type="submit" form="id-info">{props.second}</button>
-                  </div>
+        <StyledForm>
+              <StyledBg>
+                  <StyledHeader>{props.first}</StyledHeader>
+                  <StyledInfo>
+                      <StyledInput type="email" placeholder="Email" name="email" required/>
+                      <StyledInput type="password" placeholder="Пароль" name="password" required/>
+                      <StyledButton type="submit" form="id-info">{props.second}</StyledButton>
+                  </StyledInfo>
                   <a href="">{props.third}</a>
-              </div>
-        </div>
+              </StyledBg>
+        </StyledForm>
         </>
     )
 }
