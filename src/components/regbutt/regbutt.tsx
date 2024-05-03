@@ -1,4 +1,6 @@
 import React from 'react';
+import './regbutton-styled';
+import { LinkButton1, LinkContrastButton } from './regbutton-styled';
 
 interface RegistrationButtonProps {
     text: string;
@@ -6,7 +8,7 @@ interface RegistrationButtonProps {
 }
 
 export const RegButton: React.FC<RegistrationButtonProps> = ({ text, href }) => (
-    <button className="link-button1">
-        <a className="link-contrast-button" href={href}>{text}</a>
-    </button>
+    <LinkButton1>
+        <LinkContrastButton href={href}>{text}</LinkContrastButton>
+    </LinkButton1>
 );

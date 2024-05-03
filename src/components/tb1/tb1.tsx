@@ -1,4 +1,6 @@
 import React from 'react';
+import './tb1styled';
+import { H, Text1, Wrapper } from './tb1styled';
 
 interface TextBlockProps {
     title: string;
@@ -6,8 +8,8 @@ interface TextBlockProps {
 }
 
 export const TextBlock1: React.FC<TextBlockProps> = ({ title, description }) => (
-    <div className="wrapper">
-        <h1 className="h1">{title}</h1>
-        <p className="text1">{description}</p>
-    </div>
+    <Wrapper>
+        <H>{title}</H>
+        <Text1>{description}</Text1>
+    </Wrapper>
 );
