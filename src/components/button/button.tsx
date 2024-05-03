@@ -1,12 +1,15 @@
 import React from 'react';
 
+import './button-styled';
+import { LinkButton, LinkContrastButton } from './button-styled';
+
 interface ButtonProps {
     text: string;
     href: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({ text, href }) => (
-    <button className="link-button">
-        <a className="link-contrast-button" href={href}>{text}</a>
-    </button>
+    <LinkButton>
+        <LinkContrastButton href={href}>{text}</LinkContrastButton>
+    </LinkButton>
 );

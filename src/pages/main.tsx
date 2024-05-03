@@ -10,6 +10,7 @@ import {Button} from "../components/button";
 import {RegButton} from "../components/regbutt";
 import {Footer} from "../components/footer";
 
+
 import { lotos} from '../img';
 import { girl} from '../img';
 import { psyho} from '../img';
@@ -21,6 +22,7 @@ export const Main = () => {
     
     <main className="main-content">
         <div className="wrapper">
+
         <section className="card1">
         <Image1 src={lotos} alt="девушка в позе лотоса" />
         <TextBlock1
@@ -28,12 +30,14 @@ export const Main = () => {
             description="Добро пожаловать на сайт, посвященный психологическим тестам! Здесь вы найдете широкий выбор тестов, которые помогут вам лучше понять себя, свои эмоции, поведение и отношения с окружающими."
         />
         </section>
+
         <section className="card1">
             <Title text="ОНЛАЙН ПСИХОЛОГИЧЕСКИЕ ТЕСТЫ" />
             <Par1 text="Психологические тесты – это мощный инструмент для самопознания. Они помогают выявить личностные черты, скрытые таланты, а также понять свои сильные и слабые стороны." />
             <Image1 src={girl} alt="Спокойная девушка" />
-            <Button text="К ТЕСТАМ!" href="#03" />
+            <Button text="К ТЕСТАМ!" href="#01" />
         </section>
+
         <section className="card1">
             <Title text="РЕГИСТРАЦИЯ И КОНСУЛЬТАЦИИ" />
             <div className="content3">
@@ -42,6 +46,7 @@ export const Main = () => {
             </div>
             <Image1 src={psyho} alt="Консультация психолога" />
         </section>
+        
         </div>
     </main>
 

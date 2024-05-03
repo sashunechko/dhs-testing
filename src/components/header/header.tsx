@@ -1,24 +1,27 @@
 import React from "react"
 
+import './header.styled';
+
 import {logo} from "../../img";
+import { HeaderBlock, HeaderNav, HeaderWrapper, LinkContrast, Wrapper } from "./header.styled";
 
 export class Header extends React.Component{
     render(){
         return (
             <>
-            <header className="header">
-                <div className="wrapper">
-                    <div className="header-wrapper">
-                    <img src={logo} alt="Логотип. PsycologyTesting" className="header-logo-pic"/>
-                    <nav className="header-nav">
-                        <ul className="nav-list">
-                            <li><a className="link-contrast" href="#01">ТЕСТЫ</a></li>
-                            <li><a className="link-contrast" href="#02">ЛИЧНЫЙ КАБИНЕТ</a></li>
-                        </ul>
+            <HeaderBlock>
+                <Wrapper>
+                    <HeaderWrapper>
+                    <img src={logo} alt="Логотип. PsycologyTesting"/>
+                    <nav>
+                        <HeaderNav>
+                            <li><LinkContrast href="#01">ТЕСТЫ</LinkContrast></li>
+                            <li><LinkContrast href="#02">ЛИЧНЫЙ КАБИНЕТ</LinkContrast></li>
+                        </HeaderNav>
                     </nav>
-                    </div>
-                </div>
-            </header>   
+                    </HeaderWrapper>
+                </Wrapper>
+            </HeaderBlock>   
             </>
             )
     }
