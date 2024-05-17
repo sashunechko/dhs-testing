@@ -16,6 +16,7 @@ export const Wrapper = styled.div`
 
 export const HeaderWrapper = styled.div`
     display: flex;
+    flex-wrap:wrap;
     align-items: flex-end;
     justify-content: space-between;
 `;
@@ -26,7 +27,7 @@ export const StyledLink = styled(Link)`
     font-size: 32px;
     color: #fff;
     text-decoration: none;
-
+    margin-left:40px;
     :hover, :focus, :active{
         opacity: .75;
     }

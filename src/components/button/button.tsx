@@ -10,6 +10,6 @@ interface ButtonProps {
 
 export const Button: React.FC<ButtonProps> = ({ text, href }) => (
     <LinkButton>
-        <LinkContrastButton href={href}>{text}</LinkContrastButton>
+        <LinkContrastButton to={href}>{text}</LinkContrastButton>
     </LinkButton>
 );

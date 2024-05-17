@@ -10,7 +10,8 @@ import { URLs } from "../../__data__/urls";
 
 const nav = {
     testlist: { title: "ТЕСТЫ", href: URLs.ui.testlist },
-    lk: { title: "ЛИЧНЫЙ КАБИНЕТ", href: URLs.ui.lk }
+    lk: { title: "ЛИЧНЫЙ КАБИНЕТ", href: URLs.ui.lk },
+    enter: { title: "ВХОД", href: URLs.ui.enter }
 }
 
 export class Header extends React.Component{
@@ -22,8 +23,9 @@ export class Header extends React.Component{
                     <HeaderWrapper>
                     <img src={logo} alt="Логотип. PsycologyTesting"/>
                     <nav>
-                        URLs.ui.testlist && (<StyledLink to={nav.testlist.href}>{nav.testlist.title}</StyledLink>)
-                        URLs.ui.lk && (<StyledLink to={nav.lk.href}>{nav.lk.title}</StyledLink>)
+                        <StyledLink to={nav.testlist.href}>{nav.testlist.title}</StyledLink>
+                        <StyledLink to={nav.lk.href}>{nav.lk.title}</StyledLink>
+                        <StyledLink to={nav.enter.href}>{nav.enter.title}</StyledLink>
                     </nav>
                     </HeaderWrapper>
                 </Wrapper>

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import {Link} from "react-router-dom";
 
 export const LinkButton = styled.button`
     margin-top: 179px;
@@ -8,7 +9,8 @@ export const LinkButton = styled.button`
     background: #374375;
     text-align: center;
 `;
-export const LinkContrastButton = styled.a`
+
+export const LinkContrastButton = styled(Link)`
     font-family: 'Inter';
     font-weight: 500;
     font-size: 32px;

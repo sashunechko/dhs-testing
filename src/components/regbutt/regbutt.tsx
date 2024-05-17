@@ -9,6 +9,6 @@ interface RegistrationButtonProps {
 
 export const RegButton: React.FC<RegistrationButtonProps> = ({ text, href }) => (
     <LinkButton1>
-        <LinkContrastButton href={href}>{text}</LinkContrastButton>
+        <LinkContrastButton to={href}>{text}</LinkContrastButton>
     </LinkButton1>
 );

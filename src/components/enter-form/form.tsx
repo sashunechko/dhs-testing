@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import {Link} from "react-router-dom";
 
 import { StyledBg, StyledForm, StyledButton, StyledHeader, StyledInfo, StyledInput} from "./form.styled";
 
@@ -13,7 +14,7 @@ export function Form(props) {
                       <StyledInput type="password" placeholder="Пароль" name="password" required/>
                       <StyledButton type="submit" form="id-info">{props.second}</StyledButton>
                   </StyledInfo>
-                  <a href="">{props.third}</a>
+                  <Link to={props.href}>{props.text}</Link>
               </StyledBg>
         </StyledForm>
         </>

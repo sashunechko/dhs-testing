@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import {Link} from "react-router-dom";
 
 export const LinkButton1 = styled.button`
     margin-left: 54px;
@@ -9,14 +10,15 @@ export const LinkButton1 = styled.button`
     text-align: center;
     margin-bottom: 47px;
 `;
-export const LinkContrastButton = styled.a`
-    font-family: 'Inter';
-    font-weight: 500;
-    font-size: 32px;
-    color: #fff;
-    text-decoration: none;
-    vertical-align: middle;
-    :hover, :focus, :active{
-        opacity: .75;
-    }
+
+export const LinkContrastButton = styled(Link)`
+font-family: 'Inter';
+font-weight: 500;
+font-size: 32px;
+color: #fff;
+text-decoration: none;
+vertical-align: middle;
+:hover, :focus, :active{
+    opacity: .75;
+}
 `;

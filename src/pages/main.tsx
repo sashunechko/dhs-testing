@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 import {Header} from "../components/header";
 import {Image1} from "../components/im1";
@@ -9,6 +10,14 @@ import {Par2} from "../components/par2";
 import {Button} from "../components/button";
 import {RegButton} from "../components/regbutt";
 import {Footer} from "../components/footer";
+
+import { URLs } from "../__data__/urls";
+
+const nav = {
+    testlist: { title: "К ТЕСТАМ!", href: URLs.ui.testlist },
+    lk: { title: "ЛИЧНЫЙ КАБИНЕТ", href: URLs.ui.lk },
+    reg: { title: "РЕГИСТРАЦИЯ", href: URLs.ui.registration },
+}
 
 
 import { lotos} from '../img';
@@ -35,13 +44,13 @@ export const Main = () => {
             <Title text="ОНЛАЙН ПСИХОЛОГИЧЕСКИЕ ТЕСТЫ" />
             <Par1 text="Психологические тесты – это мощный инструмент для самопознания. Они помогают выявить личностные черты, скрытые таланты, а также понять свои сильные и слабые стороны." />
             <Image1 src={girl} alt="Спокойная девушка" />
-            <Button text="К ТЕСТАМ!" href="#01" />
+            <Button text={nav.testlist.title} href={nav.testlist.href} />
         </section>
 
         <section className="card1">
             <Title text="РЕГИСТРАЦИЯ И КОНСУЛЬТАЦИИ" />
             <div className="content3">
-                <RegButton text="РЕГИСТРАЦИЯ" href="#04" />
+                <RegButton text={nav.reg.title} href={nav.reg.href} />
                 <Par2 text="дает возможность: сохранять и просматривать результаты тестирований, записываться к специалисту, следить за графиком консультаций" />
             </div>
             <Image1 src={psyho} alt="Консультация психолога" />
