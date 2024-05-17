@@ -1,4 +1,6 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { PageRoutes } from './routes';
 
 import { Main } from './pages/main'
 import { Testlist } from './pages/testlist'
@@ -18,6 +20,14 @@ const App = () => {
     // <Enter/>
    <Testlist />
   );
+
+  // return (
+  //   <BrowserRouter>
+  //     {/* <Global styles={globalStyles} /> */}
+  //     <PageRoutes />
+  //   </BrowserRouter>
+  // );
+
 };
 
 export default App;
