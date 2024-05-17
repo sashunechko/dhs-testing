@@ -5,7 +5,6 @@ import {Profile} from "../components/profile";
 import {Nav} from "../components/nav-lk";
 import {Footer} from "../components/footer";
 
-
 import { person} from '../img';
 
 export const Lk = () => {

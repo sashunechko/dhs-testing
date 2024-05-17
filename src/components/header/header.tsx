@@ -25,7 +25,6 @@ export class Header extends React.Component{
                     <nav>
                         <StyledLink to={nav.testlist.href}>{nav.testlist.title}</StyledLink>
                         <StyledLink to={nav.lk.href}>{nav.lk.title}</StyledLink>
-                        <StyledLink to={nav.enter.href}>{nav.enter.title}</StyledLink>
                     </nav>
                     </HeaderWrapper>
                 </Wrapper>
