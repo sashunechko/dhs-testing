@@ -1,9 +1,17 @@
-import React from "react"
+import React from "react";
+import {Link} from "react-router-dom";
 
 import './header.styled';
 
 import {logo} from "../../img";
-import { HeaderBlock, HeaderNav, HeaderWrapper, LinkContrast, Wrapper } from "./header.styled";
+import { HeaderBlock, HeaderWrapper, StyledLink, Wrapper } from "./header.styled";
+
+import { URLs } from "../../__data__/urls";
+
+const nav = {
+    testlist: { title: "ТЕСТЫ", href: URLs.ui.testlist },
+    lk: { title: "ЛИЧНЫЙ КАБИНЕТ", href: URLs.ui.lk }
+}
 
 export class Header extends React.Component{
     render(){
@@ -14,10 +22,8 @@ export class Header extends React.Component{
                     <HeaderWrapper>
                     <img src={logo} alt="Логотип. PsycologyTesting"/>
                     <nav>
-                        <HeaderNav>
-                            <li><LinkContrast href="#01">ТЕСТЫ</LinkContrast></li>
-                            <li><LinkContrast href="#02">ЛИЧНЫЙ КАБИНЕТ</LinkContrast></li>
-                        </HeaderNav>
+                        URLs.ui.testlist && (<StyledLink to={nav.testlist.href}>{nav.testlist.title}</StyledLink>)
+                        URLs.ui.lk && (<StyledLink to={nav.lk.href}>{nav.lk.title}</StyledLink>)
                     </nav>
                     </HeaderWrapper>
                 </Wrapper>

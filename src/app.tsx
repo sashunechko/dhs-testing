@@ -12,21 +12,13 @@ import './css/style.css'
 import './css/record.css'
 
 const App = () => {
-  return (
-    // <Main />
-    // <Lk/>
-    //<Rec/>
-    //<Reg/>
-    // <Enter/>
-   <Testlist />
-  );
 
-  // return (
-  //   <BrowserRouter>
-  //     {/* <Global styles={globalStyles} /> */}
-  //     <PageRoutes />
-  //   </BrowserRouter>
-  // );
+  return (
+    <BrowserRouter>
+      {/* <Global styles={globalStyles} /> */}
+      <PageRoutes />
+    </BrowserRouter>
+  );
 
 };
 
