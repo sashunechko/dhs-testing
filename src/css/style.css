@@ -417,3 +417,60 @@ text-align: center;
     text-align: center;
     color: #fffcf5;
   }
+/* стили для результатов */
+  .section-result{
+    width: 1355px;
+    height: 800px;
+    display: flex;
+    flex-wrap:wrap;
+    margin-top: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    flex-direction: row;
+  }
+  .h-result{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 50px;
+    text-align: center;
+    color: #374375;
+  }
+  .t-result{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 22px;
+    color: #374375;
+    max-width: 700px;
+    text-align: justify; 
+  }
+  .d-result{
+    display: block;
+    flex-wrap:wrap;
+    margin-top: 40px;
+    margin-left: 45px;
+  }
+  .sovet{
+    border-radius: 138px;
+    width: 512px;
+    height: 208px;
+    background: #fff;
+    margin-bottom: 70px;
+  }
+  .t-sovet{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 32px;
+    color: #374375;
+    max-width: 315px;
+    text-align: center;
+    margin-left: 90px;
+    margin-bottom: 15px;
+  }
+  .link-red{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 32px;
+    color: #89515a;
+    margin-left: 190px;
+  }
