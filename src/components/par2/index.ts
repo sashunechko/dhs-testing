@@ -1,1 +1,0 @@
-export {Par2} from './par2'

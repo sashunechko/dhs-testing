@@ -1,18 +1,19 @@
 import React from "react";
 
 import {Header} from "../components/header";
-import {Nav} from "../components/lk/nav-lk";
 import {Footer} from "../components/footer";
-import {Main} from "../components/lk/main-lk";
+import {Res} from "../components/result";
 
-export const Lk = () => {
+import '../css/style.css';
+import '../css/record.css';
+
+export const Result = () => {
   return (
     <>
     <Header/>
-    <Main/>
-    <Nav/>
+    <Res/>
     <Footer/>
     </>
   );
 };
-export default Lk;
+export default Result;

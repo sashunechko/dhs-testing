@@ -1,0 +1,1 @@
+export {Res} from './result'

@@ -1,0 +1,1 @@
+export {MainBody} from './main-content'

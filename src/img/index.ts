@@ -8,3 +8,4 @@ export { default as record } from './svg/record.svg';
 export { default as header } from './header.jpg';
 export { default as logo_png } from './logo.png';
 export { default as icon } from './icon.png';
+export {default as problem} from './svg/problem.svg';

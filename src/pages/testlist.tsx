@@ -1,13 +1,13 @@
 import React from "react";
 
-import '../css/style.css';
+// import '../css/style.css';
 
 import {Header} from "../components/header";
 import {Footer} from "../components/footer";
-import {List} from "../components/list-of-tests";
-import {Search} from "../components/search-form";
-import {Filter} from "../components/filters";
-import {Head} from "../components/testlist-head";
+import {List} from "../components/testlist/list-of-tests";
+import {Search} from "../components/testlist/search-form";
+import {Filter} from "../components/testlist/filters";
+import {Head} from "../components/testlist/testlist-head";
 
 export const Testlist = () => {
   return (

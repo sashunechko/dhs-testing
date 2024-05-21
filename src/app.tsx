@@ -4,9 +4,6 @@ import { PageRoutes } from './routes';
 
 import ErrorBoundary from "./components/error-boundary"
 
-import './css/style.css'
-import './css/record.css'
-
 const App = () => {
 
   return (
