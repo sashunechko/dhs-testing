@@ -448,7 +448,8 @@ text-align: center;
     display: block;
     flex-wrap:wrap;
     margin-top: 40px;
-    margin-left: 45px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .sovet{
     border-radius: 138px;
@@ -464,7 +465,8 @@ text-align: center;
     color: #374375;
     max-width: 315px;
     text-align: center;
-    margin-left: 90px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 15px;
   }
   .link-red{
