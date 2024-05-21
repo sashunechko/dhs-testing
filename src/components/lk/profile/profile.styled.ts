@@ -21,7 +21,7 @@ export const BgBio = styled.div`
     border-radius: 69px;
     width: 700px;
     height: 400px;
-    background: #fffcf5;
+    background: var(--main-transparent);
 `;
 
 export const Info = styled.div`
@@ -38,7 +38,7 @@ export const Box = styled.input`
     background-color: #D9D9D9;
     font-weight: 500;
     font-size: 26px;
-    color: #374375;
+    color: var(--main);
     margin-bottom: 48px;
 `;
 
@@ -46,10 +46,10 @@ export const RedButton = styled.button`
     border-radius: 118px;
     width: 375px;
     height: 70px;
-    background-color: #dfaea0;
+    background-color: (--accent);
     font-weight: 500;
     font-size: 26px;
-    color: #374375;
+    color: var(--main);
     margin-bottom: 71px;
 `;
 
@@ -58,12 +58,12 @@ export const Button = styled.button`
     width: 310px;
     height: 59px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    background: #374375;
+    background: var(--main);
 `;
 
 export const Text = styled.p`
     font-weight: 500;
     font-size: 24px;
     text-align: center;
-    color: #fffcf5;
+    color: var(--main-transparent);
 `;

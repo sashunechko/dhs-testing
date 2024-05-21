@@ -1,7 +1,5 @@
 import React from "react";
 
-// import '../css/style.css';
-
 import {Header} from "../components/header";
 import {Footer} from "../components/footer";
 import {List} from "../components/testlist/list-of-tests";

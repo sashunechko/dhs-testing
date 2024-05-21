@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 import './header.styled';
 
-import {logo} from "../../img";
+import {logo} from "../../assets";
 import { HeaderBlock, HeaderWrapper, StyledLink, Wrapper } from "./header.styled";
 
 import { URLs } from "../../__data__/urls";

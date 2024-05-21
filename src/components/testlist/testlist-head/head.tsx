@@ -2,7 +2,7 @@ import React from "react"
 
 import {StyledImg, StyledText} from "./head.styled";
 
-import { header} from '../../../img';
+import { header} from '../../../assets';
 
 export function Head() {
         return (

@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import {Link} from 'react-router-dom';
 
 export const StyledRectangle = styled.div`
     width: 98%;
@@ -15,4 +16,9 @@ export const StyledRectangle = styled.div`
 
 export const Table = styled.div`
     columns: 2;
+`;
+
+export const StyledLink = styled(Link)`
+    color: var(--main);
+    text-decoration: underline;
 `;

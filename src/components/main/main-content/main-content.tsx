@@ -1,5 +1,4 @@
 import React from "react";
-import {Link} from "react-router-dom";
 
 import { Card, Content } from "./main-content.styled";
 
@@ -19,9 +18,9 @@ const nav = {
     reg: { title: "РЕГИСТРАЦИЯ", href: URLs.ui.registration },
 }
 
-import { lotos} from '../../../img';
-import { girl} from '../../../img';
-import { psyho} from '../../../img';
+import { lotos} from '../../../assets';
+import { girl} from '../../../assets';
+import { psyho} from '../../../assets';
 
 export class MainBody extends React.Component{
     render(){

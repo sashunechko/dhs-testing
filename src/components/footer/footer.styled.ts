@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
 export const StyledFooter = styled.footer`
-    backdrop-filter: blur(4px);
-    background-color: rgba(255, 252, 245, 0.27);
+    backdrop-filter: blur(10px);
+    background-color: var(--bg-main);
     left:0;
     bottom:0;
 `;
@@ -23,7 +23,7 @@ export const Text = styled.p`
     font-weight: 500;
     font-size: 32px;
     text-align: center;
-    color: #374375;
+    color: var(--main);
     vertical-align: middle;
 `;
 

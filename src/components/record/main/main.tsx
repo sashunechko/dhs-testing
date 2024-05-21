@@ -3,7 +3,7 @@ import React from 'react';
 import {MainContent, Bio, Bg} from './main.styled';
 
 import {InfoForm} from "../info";
-import { record} from '../../../img';
+import { record} from '../../../assets';
 
 export const Main = () => {
     return (

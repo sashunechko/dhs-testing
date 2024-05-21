@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import {Link} from "react-router-dom";
 
 export const HeaderBlock = styled.header`
-    background-color: #374375;
+    background-color: var(--main);
     position: fixed;
     top:0;
     left:0;
@@ -25,7 +25,7 @@ export const StyledLink = styled(Link)`
     font-family: 'Inter';
     font-weight: 500;
     font-size: 32px;
-    color: #fff;
+    color: var(--text-contrast);
     text-decoration: none;
     margin-left:40px;
     :hover, :focus, :active{

@@ -18,14 +18,14 @@ export const StyledRes = styled.h1`
     font-weight: 500;
     font-size: 50px;
     text-align: center;
-    color: #374375;
+    color: var(--main);
 `;
 
 export const StyledText = styled.p`
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 22px;
-    color: #374375;
+    color: var(--main);
     max-width: 700px;
     text-align: justify; 
 `;
@@ -42,7 +42,7 @@ export const Tip = styled.div`
     border-radius: 138px;
     width: 512px;
     height: 208px;
-    background: #fff;
+    background: var(--text-contrast);
     margin-bottom: 70px;
 `;
 
@@ -50,7 +50,7 @@ export const StyledTip = styled.p`
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 32px;
-    color: #374375;
+    color: var(--main);
     max-width: 315px;
     text-align: center;
     margin-left: auto;
@@ -62,6 +62,6 @@ export const StyledLink = styled(Link)`
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 32px;
-    color: #89515a;
+    color: var(--brand);
     margin-left: 190px;
 `;

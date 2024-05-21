@@ -2,7 +2,7 @@ import React from "react"
 
 import {Profile} from "../../lk/profile";
 
-import { person} from '../../../img';
+import { person} from '../../../assets';
 
 import {MainContent, Wrapper, Bio, Button} from './main.styled';
 

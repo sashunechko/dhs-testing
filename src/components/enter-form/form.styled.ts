@@ -49,7 +49,7 @@ export const StyledButton = styled.button`
     background-color: #dfaea0;
     font-weight: 500;
     font-size: 26px;
-    color: #374375;
+    color: car(--main);
     margin-bottom: 71px;
 `;
 

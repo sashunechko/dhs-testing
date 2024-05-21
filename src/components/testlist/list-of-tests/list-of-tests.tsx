@@ -1,7 +1,6 @@
 import React from "react"
-import {Link} from 'react-router-dom';
 
-import {Table, StyledRectangle} from "./list-of-tests.styled";
+import {Table, StyledRectangle, StyledLink} from "./list-of-tests.styled";
 
 const data = [
     "Тест на самооценку",
@@ -20,7 +19,7 @@ const data = [
 
 const listTests = data.map(test => 
     <StyledRectangle>
-        <Link to="#Q">{test}</Link>
+        <StyledLink to="#Q">{test}</StyledLink>
     </StyledRectangle>
 );
 

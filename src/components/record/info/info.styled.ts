@@ -32,9 +32,9 @@ export const Button = styled.button`
     border-radius: 118px;
     width: 375px;
     height: 70px;
-    background-color: #dfaea0;
+    background-color: var(--accent);
     font-weight: 500;
     font-size: 26px;
-    color: #374375;
+    color: var(--main);
     margin-bottom: 71px;
 `;

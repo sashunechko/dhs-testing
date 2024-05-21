@@ -2,8 +2,8 @@ import React from "react"
 
 import { Wrapper, HeaderWrapper, StyledFooter, FooterWrapper, Text} from "./footer.styled";
 
-import {git} from '../../img';
-import {logo} from '../../img';
+import {git} from '../../assets';
+import {logo} from '../../assets';
 
 export function Footer() {
         return (

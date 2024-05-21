@@ -1,7 +1,7 @@
 import React from "react"
 import {Link} from "react-router-dom";
 import { URLs } from "../../__data__/urls";
-import {problem} from '../../img';
+import {problem} from '../../assets';
 
 import {Section, StyledRes, StyledText, StyledDesc, Tip, StyledTip, StyledLink} from './result.styled';
 

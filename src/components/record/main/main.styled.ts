@@ -17,5 +17,5 @@ export const Bg = styled.div`
     border-radius: 138px;
     width: 538px;
     height: 721px;
-    background: #fffcf5;
+    background: var(--main-transparent);
 `;
