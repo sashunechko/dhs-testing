@@ -1,6 +1,7 @@
 import React from "react"
 
 import {Table, StyledRectangle, StyledLink} from "./list-of-tests.styled";
+import { URLs } from "../../../__data__/urls";
 
 const data = [
     "Тест на самооценку",
@@ -19,7 +20,7 @@ const data = [
 
 const listTests = data.map(test => 
     <StyledRectangle>
-        <StyledLink to="#Q">{test}</StyledLink>
+        <StyledLink to={URLs.ui.questions}>{test}</StyledLink>
     </StyledRectangle>
 );
 
