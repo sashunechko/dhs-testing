@@ -17,6 +17,7 @@ export const StyledRes = styled.h1`
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 50px;
+    font-style: italic;
     text-align: center;
     color: var(--main);
 `;
@@ -42,8 +43,9 @@ export const Tip = styled.div`
     border-radius: 138px;
     width: 512px;
     height: 208px;
-    background: var(--text-contrast);
+    background: var(--accent);
     margin-bottom: 70px;
+    text-align: center;
 `;
 
 export const StyledTip = styled.p`
@@ -53,9 +55,9 @@ export const StyledTip = styled.p`
     color: var(--main);
     max-width: 315px;
     text-align: center;
+    padding-top: 33px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 15px;
 `;
 
 export const StyledLink = styled(Link)`
@@ -63,5 +65,4 @@ export const StyledLink = styled(Link)`
     font-weight: 500;
     font-size: 32px;
     color: var(--brand);
-    margin-left: 190px;
 `;
