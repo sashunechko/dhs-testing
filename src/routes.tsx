@@ -21,7 +21,7 @@ export const PageRoutes = () => (
         {URLs.ui.registration && <Route path={URLs.ui.registration} element={<Reg />} />}
         {URLs.ui.enter && <Route path={URLs.ui.enter} element={<Enter />} />}
         {URLs.ui.result && <Route path={URLs.ui.result} element={<Result />} />}
-        {URLs.ui.test && <Route path={URLs.ui.test} element={<Test />} />}
+        {URLs.ui.q && <Route path={URLs.ui.q} element={<Test />} />}
 
         <Route path="*" element={<h1>Page not found</h1>} />
     </Routes>

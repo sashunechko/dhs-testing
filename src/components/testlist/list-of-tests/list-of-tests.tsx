@@ -9,7 +9,7 @@ export function List() {
 
     const listTests = data.map(test => 
         <StyledRectangle>
-            <StyledLink to={URLs.ui.test}>{test.name} ( {test.executionTime} мин. ) </StyledLink>
+            <StyledLink to={URLs.ui.q}>{test.name} ( {test.executionTime} мин. ) </StyledLink>
         </StyledRectangle>
     );
 
