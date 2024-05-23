@@ -9,15 +9,15 @@ module.exports = {
   },
   /* use https://kc.admin.inno-js.ru/ to create config, navigations and features */
   navigations: {
-    'dhs-testing.main': '/dhs-testing',
+    "dhs-testing.main": "/dhs-testing",
     "dhs-testing.testlist": "/testlist",
+    "dhs-testing.first": "/main",
     "dhs-testing.lk": "/lk",
     "dhs-testing.record": "/record",
     "dhs-testing.enter": "/enter",
     "dhs-testing.registration": "/registration",
-    "dhs-testing.first": "/main",
     "dhs-testing.result": "/result",
-    "dhs-testing.questions": "/questions"
+    "dhs-testing.test": "/test"
   },
   features: {
     'dhs-testing': {

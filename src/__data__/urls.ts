@@ -10,7 +10,7 @@ export const URLs = {
     enter: getNavigationsValue('dhs-testing.enter') && `${baseUrl}${getNavigationsValue('dhs-testing.enter')}`,
     registration: getNavigationsValue('dhs-testing.registration') && `${baseUrl}${getNavigationsValue('dhs-testing.registration')}`,
     record: getNavigationsValue('dhs-testing.record') && `${baseUrl}${getNavigationsValue('dhs-testing.record')}`,
-    questions: getNavigationsValue('dhs-testing.questions') && `${baseUrl}${getNavigationsValue('dhs-testing.questions')}`,
+    test: getNavigationsValue('dhs-testing.test') && `${baseUrl}${getNavigationsValue('dhs-testing.test')}`,
     lk: getNavigationsValue('dhs-testing.lk') && `${baseUrl}${getNavigationsValue('dhs-testing.lk')}`,
     result: getNavigationsValue('dhs-testing.result') && `${baseUrl}${getNavigationsValue('dhs-testing.result')}`
   },
