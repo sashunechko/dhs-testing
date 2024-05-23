@@ -1,30 +1,29 @@
-import React from "react"
+import React, {useState, useEffect} from "react";
 
 import {Table, StyledRectangle, StyledLink} from "./list-of-tests.styled";
 import { URLs } from "../../../__data__/urls";
 
-const data = [
-    "Тест на самооценку",
-    "Какой у Вас тип мышления?",
-    "Экспресс IQ-тест",
-    "Определение уровня депрессии",
-    "Есть ли у Вас РПП?",
-    "Тест на скрытый нарциссизм",
-    "Диагностика выгорания",
-    "Тест на уверенность в себе",
-    "Диагностика ОКР",
-    "Насколько Вы тревожны?",
-    "Тест на СДВГ",
-    "Ваш тип привязанности"
-]
-
-const listTests = data.map(test => 
-    <StyledRectangle>
-        <StyledLink to={URLs.ui.questions}>{test}</StyledLink>
-    </StyledRectangle>
-);
-
 export function List() {
+
+    const [data, setData] = useState([]);
+
+    const listTests = data.map(test => 
+        <StyledRectangle>
+            <StyledLink to={URLs.ui.test}>{test.name} ( {test.executionTime} мин. ) </StyledLink>
+        </StyledRectangle>
+    );
+
+    useEffect(() => {
+      fetch('/api/tests-data')
+          .then(response => response.json())
+          .then(data => {
+              setData(data.titles);
+          })
+          .catch(error => {
+              console.error('Error fetching test data:', error);
+          });
+    }, []);
+
         return (
             <>
                 <Table>
