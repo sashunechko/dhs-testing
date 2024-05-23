@@ -4,6 +4,7 @@ export const StyledForm = styled.form`
     position: relative;
     width: 300px;
     margin: 0 auto;
+    z-index:1;
 `;
 
 export const StyledInput = styled.input`
