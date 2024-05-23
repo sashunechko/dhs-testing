@@ -7,6 +7,7 @@ import {logo} from "../../assets";
 import { HeaderBlock, HeaderWrapper, StyledLink, Wrapper } from "./header.styled";
 
 import { URLs } from "../../__data__/urls";
+import Main from "../../pages/main";
 
 const nav = {
     testlist: { title: "ТЕСТЫ", href: URLs.ui.testlist },
@@ -21,7 +22,9 @@ export class Header extends React.Component{
             <HeaderBlock>
                 <Wrapper>
                     <HeaderWrapper>
-                    <img src={logo} alt="Логотип. PsycologyTesting"/>
+                    <Link to={URLs.ui.main}>
+                                <img src={logo} alt="Логотип. PsycologyTesting"/>
+                    </Link>
                     <nav>
                         <StyledLink to={nav.testlist.href}>{nav.testlist.title}</StyledLink>
                         <StyledLink to={nav.lk.href}>{nav.lk.title}</StyledLink>
