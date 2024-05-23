@@ -8,8 +8,8 @@ import Testlist from './pages/testlist'
 import Rec from './pages/record'
 import Reg from './pages/registration'
 import Enter from './pages/enter'
-import Result from './pages/result';
-import Test from './pages/test';
+import Result from './pages/result'
+import Test from './pages/test'
 
 export const PageRoutes = () => (
     <Routes>
