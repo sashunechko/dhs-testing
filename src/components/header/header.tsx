@@ -7,7 +7,6 @@ import {logo} from "../../assets";
 import { HeaderBlock, HeaderWrapper, StyledLink, Wrapper } from "./header.styled";
 
 import { URLs } from "../../__data__/urls";
-import Main from "../../pages/main";
 
 const nav = {
     testlist: { title: "ТЕСТЫ", href: URLs.ui.testlist },

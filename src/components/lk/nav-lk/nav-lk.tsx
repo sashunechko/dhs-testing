@@ -1,10 +1,9 @@
 import React from "react"
-import {Link} from "react-router-dom";
 import { URLs } from "../../../__data__/urls";
 
 import {StyledNav, Button, LinkContrast, StyledLink} from './nav-lk.styled';
 
-export function Nav(props) {
+export function Nav() {
     return (
         <>
             <StyledNav>

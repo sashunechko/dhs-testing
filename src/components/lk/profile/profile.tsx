@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import {StyledPhoto, BgPhoto, BgBio, Info, Box, RedButton, Button, Text} from './profile.styled';
 
 export const Profile = ({ imgSrc }) => (
@@ -29,3 +29,10 @@ const Bio = () => (
         </Button>
     </BgBio>
 );
+Profile.propTypes = {
+    imgSrc: PropTypes.string.isRequired
+  };
+  
+  Photo.propTypes = {
+    imgSrc: PropTypes.string.isRequired
+  };

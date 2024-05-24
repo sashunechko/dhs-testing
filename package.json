@@ -25,5 +25,12 @@
     "react-error-boundary": "^4.0.13",
     "react-router-dom": "^6.23.1",
     "typescript": "^5.4.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "globals": "^15.3.0",
+    "typescript-eslint": "^7.10.0"
   }
 }
