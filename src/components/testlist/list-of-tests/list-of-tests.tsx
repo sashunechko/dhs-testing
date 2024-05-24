@@ -8,8 +8,8 @@ export function List() {
     const [data, setData] = useState([]);
 
     const listTests = data.map(test => 
-        <StyledRectangle>
-            <StyledLink to={URLs.ui.q}>{test.name} ( {test.executionTime} мин. ) </StyledLink>
+        <StyledRectangle key={test.id}>
+        <StyledLink to={URLs.ui.q}>{test.name} ( {test.executionTime} мин. ) </StyledLink>
         </StyledRectangle>
     );
 

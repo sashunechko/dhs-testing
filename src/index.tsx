@@ -3,7 +3,11 @@ import ReactDOM from "react-dom/client";
   
 import App from './app';
   
-export default () => <App/>;
+const DefaultComponent = () => <App/>;
+DefaultComponent.displayName = 'DefaultComponent';
+
+export default DefaultComponent;
+
   
 let rootElement: ReactDOM.Root
   
