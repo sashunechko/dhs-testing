@@ -41,7 +41,7 @@ export function Questions() {
           <h2>
             {score} / {questions.length * 4}
           </h2>
-          <StyledLink to={URLs.ui.result}>Подробнее</StyledLink>
+          <StyledLink to={`${URLs.ui.result}?score=${score}`}>Подробнее</StyledLink>
         </Results> ) : (
             <Card>
               <Question>
