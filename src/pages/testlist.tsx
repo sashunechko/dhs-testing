@@ -13,7 +13,7 @@ export const Testlist = () => {
     <Header/>
     <Head/>
     <Search/>
-    <Filter/>
+    {/* <Filter/> */}
     <List/>
     <Footer/>
     </>
