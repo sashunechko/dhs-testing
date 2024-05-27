@@ -67,3 +67,8 @@ export const Text = styled.p`
     text-align: center;
     color: var(--main-transparent);
 `;
+
+export const MaxPhoto = styled.img`
+    max-width:400px;
+    max-height:400px;
+`;
