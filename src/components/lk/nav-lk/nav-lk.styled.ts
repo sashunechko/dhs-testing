@@ -35,3 +35,12 @@ export const StyledLink = styled(Link)`
     text-decoration: none;
     vertical-align: middle;
 `;
+
+export const WhiteBox = styled.div`
+    border-radius: 138px;
+    width: 527px;
+    height: 134px;
+    background: #fff;
+    margin-top: 100px;
+    
+`;
