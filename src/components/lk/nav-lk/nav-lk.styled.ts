@@ -35,6 +35,13 @@ export const StyledLink = styled(Link)`
     text-decoration: none;
     vertical-align: middle;
 `;
+export const EmptyBox = styled.div`
+    width: 527px;
+    max-height: 1000px;
+    display: block;
+    align-items: center;
+    margin-left: 50px;
+`
 
 export const WhiteBox = styled.div`
     border-radius: 138px;
@@ -42,5 +49,20 @@ export const WhiteBox = styled.div`
     height: 134px;
     background: #fff;
     margin-top: 100px;
-    
+    margin-bottom:50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+`;
+
+export const TextWhiteBox = styled.p`
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 32px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #374375;
+    text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    margin-left: auto;
+    margin-right: auto;
 `;

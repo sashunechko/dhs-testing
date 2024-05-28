@@ -2,11 +2,11 @@ import React from "react"
 import { URLs } from "../../../__data__/urls";
 import { useEffect } from "react";
 import {useState} from "react";
-import {StyledNav, Button, LinkContrast, StyledLink, WhiteBox} from './nav-lk.styled';
+import {StyledNav, Button, LinkContrast, StyledLink, WhiteBox, TextWhiteBox,EmptyBox} from './nav-lk.styled';
 
 export function Nav() {
     const [data, setData] = useState([]);
-    const [resultName, setResultName] = useState('');
+    const [resultName, setResultName] = useState([]);
     useEffect(() => {
         fetch('/api/results-data')
             .then(response => response.json())
@@ -19,10 +19,7 @@ export function Nav() {
     }, []);
     const handleResultsClick = () => {
         const resultWithNameFlag1 = data.filter(item => item.flag === 1);
-        console.log(resultWithNameFlag1);
-        {/*if (resultWithNameFlag1) {
-            setResultName(resultWithNameFlag1.name);
-        }*/}
+            setResultName(resultWithNameFlag1);
     };
     return (
         <>
@@ -30,10 +27,7 @@ export function Nav() {
                 
                 <Button onClick={handleResultsClick}> 
                     <LinkContrast >РЕЗУЛЬТАТЫ</LinkContrast>
-                    {resultName && (
-                    <WhiteBox>
-                        {resultName}
-                    </WhiteBox> )}
+                    
                 </Button>
                 <Button> 
                     <LinkContrast >ЗАПИСИ</LinkContrast>
@@ -43,6 +37,11 @@ export function Nav() {
                 </Button>
                 
             </StyledNav>
+            <EmptyBox>
+                        {resultName.map((item, index) => (
+                            <WhiteBox key={index}><TextWhiteBox>{item.name}</TextWhiteBox></WhiteBox>
+                        ))}
+                    </EmptyBox>
         </>
     )
 }
