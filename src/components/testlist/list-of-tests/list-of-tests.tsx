@@ -7,6 +7,7 @@ import {URLs} from "../../../__data__/urls";
 
 export function List() {
     const [data, setData] = useState([]);
+    const [initData, setInitData] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
@@ -14,6 +15,7 @@ export function List() {
             .then(response => response.json())
             .then(data => {
                 setData(data.titles);
+                setInitData(data.titles);
             })
             .catch(error => {
                 console.error('Error fetching test data:', error);
@@ -21,6 +23,7 @@ export function List() {
     }, []);
 
     const [sortValue, setSortValue] = useState("По алфавиту");
+    const [filterValue, setFilterValue] = useState("Без фильтра");
 
     const handleSortChange = (event) => {
         setSortValue(event.target.value);
@@ -30,6 +33,16 @@ export function List() {
         } else if (event.target.value === "По времени выполнения") {
             const sortedData = data.slice().sort((a, b) => a.executionTime - b.executionTime);
             setData(sortedData);
+        }
+    };
+
+    const handleFilterChange = (event) => {
+        setFilterValue(event.target.value);
+        if (event.target.value === "Без фильтра") {
+            setData(initData);
+        } else {
+            const res = initData.filter(test => test.filter === event.target.value);
+            setData(res);
         }
     };
 
@@ -45,7 +58,8 @@ export function List() {
         <>
             <StyledSort>
                 <label htmlFor="filter">Фильтр</label>
-                <select id="filter" name="filter" >
+                <select id="filter" name="filter" value={filterValue} onChange={handleFilterChange}>
+                    <option value="Без фильтра">Без фильтра</option>
                     <option value="Диагностика расстройств">Диагностика расстройств</option>
                     <option value="На тип личности">На тип личности</option>
                     <option value="Интеллектуальные">Интеллектуальные</option>
@@ -69,7 +83,6 @@ export function List() {
                     value={searchQuery}
                     onChange={handleSearchChange}
                 />
-                <StyledButton type="submit">Найти</StyledButton>
             </StyledForm>
 
             <Table>
