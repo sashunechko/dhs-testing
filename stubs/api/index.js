@@ -8,4 +8,7 @@ router.get('/results-data', (request, response) => {
     response.send(require('../json/results-data/results.json'))
   })
 
+router.get('/records-data', (request, response) => {
+    response.send(require('../json/records-data/records.json'))
+  })
 module.exports = router;

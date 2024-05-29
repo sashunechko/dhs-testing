@@ -37,7 +37,7 @@ export const StyledLink = styled(Link)`
 `;
 export const EmptyBox = styled.div`
     width: 527px;
-    max-height: 1000px;
+    max-height: 3000px;
     display: block;
     align-items: center;
     margin-left: 50px;
@@ -65,4 +65,18 @@ export const TextWhiteBox = styled.p`
     text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     margin-left: auto;
     margin-right: auto;
+`;
+
+export const PaleBox = styled.div`
+    border-radius: 74px;
+    width: 700px;
+    height: 218px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: rgba(255, 252, 245, 0.27);
+    margin-top: 100px;
+    margin-bottom:50px;
+    margin-left:700px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 `;
