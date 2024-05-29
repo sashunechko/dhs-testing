@@ -2,15 +2,15 @@ import React from "react"
 import { URLs } from "../../../__data__/urls";
 import { useEffect } from "react";
 import {useState} from "react";
-import {StyledNav, Button, LinkContrast, StyledLink, WhiteBox, TextWhiteBox, EmptyBox, PaleBox} from './nav-lk.styled';
-
+import {StyledNav, Button, LinkContrast, StyledLink, WhiteBox, TextWhiteBox, EmptyBox, PaleBox, Container,CalendarContainer,PaleBoxContainer} from './nav-lk.styled';
+import Calendar from 'react-calendar';
 export function Nav() {
     const [data, setData] = useState([]);
     const [resultName, setResultName] = useState([]);
-    const [clickCount, setClickCount] = useState(0);
+    {/*const [clickCount, setClickCount] = useState(0);*/}
 
     const [recordDates, setRecordDates] = useState([]);
-    const [clickCountRecord, setClickCountRecord] = useState(0);
+    {/*const [clickCountRecord, setClickCountRecord] = useState(0);*/}
 
     useEffect(() => {
         fetch('/api/results-data')
@@ -24,25 +24,32 @@ export function Nav() {
     }, []);
 
     const handleResultsClick = () => {
-        setClickCount(clickCount + 1);
-    if (clickCount % 2 === 0) {
+        if (recordDates.length > 0) {
+            setRecordDates([]); // Очищаем 
+        }
+    {/*    setClickCount(clickCount + 1);
+    if (clickCount % 2 === 0) { */}
         const resultWithNameFlag1 = data.filter(item => item.flag === 1);
             setResultName(resultWithNameFlag1);
-        } else {
+        {/* } else {
             setResultName([]);
-        }
+        } */}
     };
 
     const handleRecordsClick = () => {
+        if (resultName.length > 0) {
+            setResultName([]); // Очищаем 
+        }
+    
         fetch('/api/records-data')
             .then(response => response.json())
             .then(data => {
-                setClickCountRecord(clickCountRecord + 1);
-    if (clickCountRecord % 2 === 0) {
+            {/*    setClickCountRecord(clickCountRecord + 1);
+            if (clickCountRecord % 2 === 0) { */}
                 setRecordDates(data.dates);
-            } else {
+            {/* } else {
                 setRecordDates([]);
-            }
+            } */}
             })
             .catch(error => {
                 console.error('Error fetching record data:', error);
@@ -69,13 +76,18 @@ export function Nav() {
             </EmptyBox>
 
             {recordDates.length > 0 && (
-                <EmptyBox>
+                <Container>
+                    <CalendarContainer>
+                        <Calendar/>
+                    </CalendarContainer>
+                    <PaleBoxContainer>
                     {recordDates.map((item, index) => (
                         <PaleBox key={index}>
-                            <TextWhiteBox>{item.date}</TextWhiteBox>
+                            <TextWhiteBox>Дата: {item.date.split('T')[0]}, Время: {item.date.split('T')[1]}</TextWhiteBox>
                         </PaleBox>
                     ))}
-                </EmptyBox>
+                    </PaleBoxContainer>
+                </Container>
             )}
         </>
     )
