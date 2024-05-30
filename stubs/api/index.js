@@ -11,4 +11,10 @@ router.get('/results-data', (request, response) => {
 router.get('/records-data', (request, response) => {
     response.send(require('../json/records-data/records.json'))
   })
+
+  router.post('/submit-record', (request, response) => {
+    const formData = request.body; 
+    response.send({ success: true, message: "Record submitted successfully" });
+  });
+   
 module.exports = router;
