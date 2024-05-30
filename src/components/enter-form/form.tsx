@@ -100,7 +100,7 @@ useEffect(() => {
         <StyledInfo>
           <StyledInput type="email" placeholder="Email" name="email" value={email} onChange={handleEmailChange} required/>
           <StyledInput type="password" placeholder="Пароль" name="password" value={password} onChange={handlePasswordChange} required/>
-          <StyledButton type="submit" form="id-info" onClick={handleSubmit}>{props.second}</StyledButton>
+          <StyledButton type="submit" onClick={handleSubmit}>{props.second}</StyledButton>
         </StyledInfo>
         <Link to={props.href}>{props.text}</Link>
       </StyledBg>
