@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import {useState} from "react";
 import {StyledNav, Button, LinkContrast, StyledLink, WhiteBox, TextWhiteBox, EmptyBox, PaleBox, Container,CalendarContainer,PaleBoxContainer} from './nav-lk.styled';
 import Calendar from 'react-calendar';
+
 export function Nav() {
     const [data, setData] = useState([]);
     const [resultName, setResultName] = useState([]);
@@ -13,7 +14,7 @@ export function Nav() {
     {/*const [clickCountRecord, setClickCountRecord] = useState(0);*/}
 
     useEffect(() => {
-        fetch('/api/results-data')
+        fetch(`${URLs.api.main}/results-data`)
             .then(response => response.json())
             .then(data => {
                 setData(data.titles);
@@ -41,7 +42,7 @@ export function Nav() {
             setResultName([]); // Очищаем 
         }
     
-        fetch('/api/records-data')
+        fetch(`${URLs.api.main}/records-data`)
             .then(response => response.json())
             .then(data => {
             {/*    setClickCountRecord(clickCountRecord + 1);

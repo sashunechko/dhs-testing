@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import {Info, Box, Select, Button} from './info.styled';
+import { URLs } from "../../../__data__/urls";
 
 export const InfoForm = () => {
     const [name, setName] = useState('');
@@ -38,7 +39,7 @@ export const InfoForm = () => {
         specialist,
       };
   
-      fetch('/api/submit-record', {
+      fetch(`${URLs.api.main}/submit-record`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

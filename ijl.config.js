@@ -25,7 +25,6 @@ module.exports = {
     },
   },
   config: {
-    key: 'value',
-    "dhs-testing.api":"/api"
-  }
+    "dhs-testing.api": "/api"
+  },
 }

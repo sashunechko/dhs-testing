@@ -11,7 +11,7 @@ export function List() {
     const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
-        fetch('/api/tests-data')
+        fetch(`${URLs.api.main}/tests-data`)
             .then(response => response.json())
             .then(data => {
                 setData(data.titles);

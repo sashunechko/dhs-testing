@@ -25,7 +25,7 @@ export function Res() {
     };
 
     useEffect(() => {
-        fetch('/api/tests-data')
+        fetch(`${URLs.api.main}/tests-data`)
             .then(response => response.json())
             .then(data => {
                 const res = resultCounted(score);

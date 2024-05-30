@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
+import { URLs } from "../../__data__/urls";
 
 import { StyledBg, StyledForm, StyledButton, StyledHeader, StyledInfo, StyledInput } from "./form.styled";
 
@@ -8,7 +9,7 @@ export function Form(props) {
 
   const [users, setUsers] = useState([]);
 useEffect(() => {
-  fetch('/api/users-data')
+  fetch(`${URLs.api.main}/users-data`)
       .then(response => response.json())
       .then(data => {
           setUsers(data);
@@ -41,7 +42,7 @@ useEffect(() => {
 
     if (props.first === "Регистрация") {
       if (!findUser) {
-        fetch('/api/submit-reg', {
+        fetch(`${URLs.api.main}/submit-reg`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -63,7 +64,7 @@ useEffect(() => {
     } else if(props.first === "Вход") {
         if(findUser) {
           if (findUser.password === password) {
-            fetch('/api/submit-enter', {
+            fetch(`${URLs.api.main}/submit-enter`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

@@ -1,4 +1,4 @@
-import { getNavigationsValue } from '@ijl/cli';
+import { getNavigationsValue, getConfigValue } from '@ijl/cli';
 
 const baseUrl = getNavigationsValue('dhs-testing.main');
 
@@ -14,5 +14,7 @@ export const URLs = {
     lk: getNavigationsValue('dhs-testing.lk') && `${baseUrl}${getNavigationsValue('dhs-testing.lk')}`,
     result: getNavigationsValue('dhs-testing.result') && `${baseUrl}${getNavigationsValue('dhs-testing.result')}`
   },
-  api: {},
+  api: {
+    main: getConfigValue('dhs-testing.api')
+  },
 }
