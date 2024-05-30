@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 
 import {Table, StyledRectangle, StyledLink} from "./list-of-tests.styled";
 import {StyledSort} from "../filters/filters.styled";
-import {StyledForm, StyledButton, StyledInput} from "../search-form/search-form.styled";
+import {StyledForm, StyledInput} from "../search-form/search-form.styled";
 import {URLs} from "../../../__data__/urls";
 
 export function List() {

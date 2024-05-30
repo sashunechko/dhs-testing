@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { StyledSort } from "./filters.styled";
 
 export function Filter() {

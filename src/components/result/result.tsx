@@ -8,7 +8,7 @@ import {Section, StyledRes, StyledText, StyledDesc, Tip, StyledTip, StyledLink} 
 const tip = "Советуем обсудить результаты со специалистом";
 
 export function Res() {
-    let [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams] = useSearchParams();
     const score = Number(searchParams.get('score'));
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
@@ -28,7 +28,7 @@ export function Res() {
         fetch('/api/tests-data')
             .then(response => response.json())
             .then(data => {
-                let res = resultCounted(score);
+                const res = resultCounted(score);
                 setTitle(data.results[res].title);
                 setDesc(data.results[res].description);
             })
