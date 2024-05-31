@@ -61,7 +61,6 @@ export const TextWhiteBox = styled.p`
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 32px;
-    text-decoration: underline;
     text-decoration-skip-ink: none;
     color: #374375;
     text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);

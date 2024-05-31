@@ -38,3 +38,11 @@ export const Button = styled.button`
     color: var(--main);
     margin-bottom: 71px;
 `;
+export const Tip1 = styled.div`
+    border-radius: 138px;
+    width: 400px;
+    height: 180px;
+    background: #BABCE2;
+    margin-bottom: 70px;
+    text-align: center;
+`;
