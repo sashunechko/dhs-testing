@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react"
 import { URLs } from "../../__data__/urls";
-
+import { useSearchParams } from "react-router-dom";
 import {Page, Results, StyledLink, Card, Question, Number, Options, Opt} from './test.styled';
 
 export function Questions() {
@@ -10,13 +10,15 @@ export function Questions() {
     const [score, setScore] = useState(0);
     const [questions, setQuestions] = useState([]);
     const [options, setOptions] = useState([]);
+    const [searchParams] = useSearchParams();
+    const id = searchParams.get('id');
 
     useEffect(() => {
-      fetch('/api/tests-data')
+      fetch(`${URLs.api.main}/tests-data`)
           .then(response => response.json())
           .then(data => {
               setOptions(data.options);
-              setQuestions(data.questions[0]);
+              setQuestions(data.tests[id].questions);
           })
           .catch(error => {
               console.error('Error fetching test data:', error);
@@ -41,7 +43,7 @@ export function Questions() {
           <h2>
             {score} / {questions.length * 4}
           </h2>
-          <StyledLink to={`${URLs.ui.result}?score=${score}`}>Подробнее</StyledLink>
+          <StyledLink to={`${URLs.ui.result}?id=${id}&score=${score}`}>Подробнее</StyledLink>
         </Results> ) : (
             <Card>
               <Question>

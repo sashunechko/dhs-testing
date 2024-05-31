@@ -9,7 +9,10 @@ const tip = "Советуем обсудить результаты со спе�
 
 export function Res() {
     const [searchParams] = useSearchParams();
-    const score = Number(searchParams.get('score'));
+    const score = searchParams.get('score');
+    const id = searchParams.get('id');
+    console.log("score=", score);
+    console.log("id=", id);
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
 
@@ -29,11 +32,11 @@ export function Res() {
             .then(response => response.json())
             .then(data => {
                 const res = resultCounted(score);
-                setTitle(data.results[res].title);
-                setDesc(data.results[res].description);
+                setTitle(data.tests[id].results[res].title);
+                setDesc(data.tests[id].results[res].description);
             })
             .catch(error => {
-                console.error('Error fetching test data:', error);
+                console.error('Error fetching results data:', error);
             });
     }, []);
 

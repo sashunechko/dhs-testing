@@ -88,7 +88,7 @@ export function List() {
             <Table>
                 {filteredData.map(test => 
                     <StyledRectangle key={test.id}>
-                        <StyledLink to={URLs.ui.q}>{test.name} ( {test.executionTime} мин. ) </StyledLink>
+                        <StyledLink to={`${URLs.ui.q}?id=${test.id}`}>{test.name} ( {test.executionTime} мин. ) </StyledLink>
                     </StyledRectangle>
                 )}
             </Table>
