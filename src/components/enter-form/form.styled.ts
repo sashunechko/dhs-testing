@@ -39,7 +39,7 @@ export const StyledInput = styled.input`
     font-weight: 500;
     font-size: 26px;
     color: var(--main);
-    margin-bottom: 48px;
+    margin-bottom: 40px;
 `;
 
 export const StyledButton = styled.button`
@@ -50,6 +50,27 @@ export const StyledButton = styled.button`
     font-weight: 500;
     font-size: 26px;
     color: car(--main);
-    margin-bottom: 71px;
+    margin-bottom: 40px;
 `;
 
+export const RoleErrorMessage = styled.div`
+  color: var(--brand);
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+`;
+
+export const ErrorMessage = styled.p`
+  color: var(--brand);
+  font-size: 15px;
+  margin-bottom: 5px;
+  text-align: center;
+  width: 100%;
+`;
+export const Blank = styled.p`
+    color: var(--main-transparent);
+    font-size: 15px;
+    margin-bottom: 5px;
+    width: 100%;
+`;

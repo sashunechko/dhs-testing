@@ -6,7 +6,7 @@ import { URLs } from "../../__data__/urls";
 {/*import Lottie from 'react-lottie';
 import {Tip1} from '../../components/record/info/info.styled';
 import {StyledLink, StyledTip} from '../../components/result/result.styled';*/}
-import { StyledBg, StyledForm, StyledButton, StyledHeader, StyledInfo, StyledInput } from "./form.styled"; 
+import { StyledBg, StyledForm, StyledButton, StyledHeader, StyledInfo, StyledInput, ErrorMessage, Blank } from "./form.styled"; 
 import * as animationData from '../../../src/assets/succes-submit.json';
 import { useNavigate } from 'react-router-dom';
 export function Form(props) {
@@ -51,6 +51,10 @@ useEffect(() => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setIsError(false);
+    setIsError1(false);
+    setIsError2(false);
+    setIsError3(false);
 
     const formData = {
       email,
@@ -119,6 +123,8 @@ useEffect(() => {
     }  
   };
 
+  const Error = isError || isError1 || isError2 || isError3;
+
   return (
     <StyledForm>
       {/* {isSuccess &&
@@ -134,13 +140,14 @@ useEffect(() => {
       <StyledBg>
         <StyledHeader>{props.first}</StyledHeader>
         <StyledInfo>
-        {isError && <p>Произошла ошибка. Пожалуйста, попробуйте еще раз.</p>}
-        {isError1 && <p>Пользователь с таким почтовым адресом уже зарегистрирован. Войдите.</p>}
-        {isError2 && <p>Неверный пароль. Пожалуйста, попробуйте еще раз. </p>}
-        {isError3 && <p>Пользователь не найден. Пройдите регистрацию. </p>}
         <form onSubmit={handleSubmit}>
           <StyledInput type="email" placeholder="Email" name="email" value={email} onChange={handleEmailChange} required/>
           <StyledInput type="password" placeholder="Пароль" name="password" value={password} onChange={handlePasswordChange} required/>
+          {!Error && <Blank> . </Blank>}
+          {isError && <ErrorMessage>Произошла ошибка. Пожалуйста, попробуйте еще раз.</ErrorMessage>}
+        {isError1 && <ErrorMessage>Пользователь с таким почтовым адресом уже зарегистрирован. Войдите.</ErrorMessage>}
+        {isError2 && <ErrorMessage>Неверный пароль. Пожалуйста, попробуйте еще раз. </ErrorMessage>}
+        {isError3 && <ErrorMessage>Пользователь не найден. Пройдите регистрацию. </ErrorMessage>}
           <StyledButton type="submit" >{props.second}</StyledButton>
         </form>
         </StyledInfo>
