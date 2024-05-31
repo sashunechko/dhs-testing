@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const Info = styled.div`
     display: block;
     align-items:center;
-    padding-left: 75px;
+    text-align:center;
     padding-top: 61px;
     justify-content: space-between;
 `;
@@ -45,4 +45,11 @@ export const Tip1 = styled.div`
     background: #BABCE2;
     margin-bottom: 70px;
     text-align: center;
+    margin-left:65px;
+`;
+
+export const Center = styled.div`
+    align-content: center;
+    text-align: center;
+    align-items:center;
 `;

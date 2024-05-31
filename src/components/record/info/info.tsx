@@ -2,7 +2,7 @@ import React from 'react';
 import Lottie from 'react-lottie';
 import {useState} from 'react';
 import { URLs } from "../../../__data__/urls";
-import {Info, Box, Select, Button, Tip1} from './info.styled';
+import {Info, Box, Select, Button, Tip1, Center} from './info.styled';
 import {StyledLink, StyledTip} from '../../../components/result/result.styled';
 import * as animationData from '../../../assets/succes-submit.json';
 export const InfoForm = () => {
@@ -13,6 +13,7 @@ export const InfoForm = () => {
     const [specialist, setSpecialist] = useState('');
     const [isSuccess,setSuccess] = useState(false);
     const [isError, setIsError] = useState(false);
+
     const defaultOptions = {
       loop: false,
       autoplay: true, 
@@ -78,19 +79,19 @@ export const InfoForm = () => {
         <Info>
           {isError && <p>Произошла ошибка. Пожалуйста, попробуйте еще раз.</p>}
           {isSuccess && 
-          <div>
+          <Center>
             <Lottie options={defaultOptions}
               height={400}
               width={400}/>
               <Tip1>
-              <StyledTip>вы успешно записаны!</StyledTip>
-              <StyledLink to={URLs.ui.testlist}>к тестам</StyledLink>
+              <StyledTip>Вы успешно записаны!</StyledTip>
+              <StyledLink to={URLs.ui.testlist}>К тестам</StyledLink>
               </Tip1>
-          </div> }
+          </Center> }
           {!isSuccess &&   
           <form onSubmit={handleSubmit} >
             <Box type="text" placeholder="Фамилия Имя" name="name" value={name} onChange={handleNameChange}  required/>
-            <Box type="number" placeholder="+7(999)999 99 99" name="phone" value={phone} onChange={handlePhoneChange} required />
+            <Box type="phone" placeholder="+7(999)999 99 99" name="phone" value={phone} onChange={handlePhoneChange} required />
             <Box type="date" placeholder="дд.мм.гггг" name="date"  value={date} onChange={handleDateChange} required/>
             <Box type="time" placeholder="12-00" name="time" min="09:00" max="18:00"  value={time} onChange={handleTimeChange} required/>
             <Select name="фио специалиста" value={specialist} onChange={handleSpecialistChange}>
@@ -98,7 +99,7 @@ export const InfoForm = () => {
                 <option value="2">Петров</option>
                 <option value="3">Сидоров</option>
             </Select>
-            <Button type="submit">записаться</Button>
+            <Button type="submit">Записаться</Button>
           </form> }
         </Info>
     );
