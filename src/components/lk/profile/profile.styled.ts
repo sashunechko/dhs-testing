@@ -11,10 +11,7 @@ export const BgPhoto = styled.div`
     height: 400px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     background: rgba(255, 252, 245, 0.27);
-    align-content: center;
-    align-items: center;
-    padding-left: 58px;
-    margin-bottom: 28px;
+    text-align: center;
 `;
 
 export const BgBio = styled.div`
@@ -25,9 +22,9 @@ export const BgBio = styled.div`
 `;
 
 export const Info = styled.div`
+    text-align:center;
     display: block;
     align-items:center;
-    padding-left: 75px;
     padding-top: 61px;
     justify-content: space-between;
 `;
@@ -61,6 +58,14 @@ export const Button = styled.button`
     background: var(--main);
 `;
 
+export const Button1 = styled.button`
+    margin-left: 190px;
+    width: 310px;
+    height: 59px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: var(--main);
+`;
+
 export const Text = styled.p`
     font-weight: 500;
     font-size: 24px;
@@ -69,6 +74,7 @@ export const Text = styled.p`
 `;
 
 export const MaxPhoto = styled.img`
+    padding-top: 50px;
     max-width:400px;
     max-height:400px;
 `;

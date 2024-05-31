@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import {StyledPhoto, BgPhoto, BgBio, Info, Box, RedButton, Button, Text, MaxPhoto} from './profile.styled';
+import {StyledPhoto, BgPhoto, BgBio, Info, Box, RedButton, Button, Text, MaxPhoto, Button1} from './profile.styled';
 import { useState } from 'react';
 
 export const Profile = ({ imgSrc }) => (
@@ -70,9 +70,9 @@ const Bio = () => {
                         onClick={handleSaveChanges}>
                 сохранить изменения</RedButton>
         </Info>
-        <Button onClick={handleEditData}>
+        <Button1 onClick={handleEditData}>
             <Text>редактировать данные</Text>
-        </Button>
+        </Button1>
     </BgBio>
 );
 }

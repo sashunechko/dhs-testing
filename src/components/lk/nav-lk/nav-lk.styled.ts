@@ -6,8 +6,6 @@ export const StyledNav = styled.nav`
     display: flex;
     flex-wrap:wrap;
     justify-content:space-evenly;
-    max-width: 1297px;
-    margin-left: 70px;
 `
 
 export const Button = styled.button`

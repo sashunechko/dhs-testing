@@ -18,10 +18,9 @@ export const Bio = styled.div`
 `;
 
 export const Button = styled.button`
-    margin-left: 40px;
     width: 310px;
     height: 59px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     background: #374375;
+    margin-left: 45px;
 `;
-

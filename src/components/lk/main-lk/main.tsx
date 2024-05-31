@@ -6,6 +6,7 @@ import { person} from '../../../assets';
 
 import {MainContent, Wrapper, Bio, Button} from './main.styled';
 import { useEffect } from "react";
+import { StyledInfo } from "../../enter-form/form.styled";
 
 export function Main() {
     const [selectedImage, setSelectedImage] = useState(null);
