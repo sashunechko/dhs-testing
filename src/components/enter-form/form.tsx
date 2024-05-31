@@ -15,7 +15,10 @@ export function Form(props) {
   const [isSuccess,setSuccess] = useState(false);
   const [success] = useState(true);
   const navigate = useNavigate();
-
+  const [isError, setIsError] = useState(false); // ошибка
+  const [isError1, setIsError1] = useState(false); // пользователь уже зареган
+  const [isError2, setIsError2] = useState(false); // неверный пароль
+  const [isError3, setIsError3] = useState(false); // пользователь не найден
   const defaultOptions = {
     loop: false,
     autoplay: true, 
@@ -75,10 +78,12 @@ useEffect(() => {
           })
           .catch((error) => {
             console.error(error);
-            alert("Произошла ошибка.");
+            {/*alert("Произошла ошибка.");*/}
+            setIsError(true);
           });
       } else {
-          alert("Пользователь с таким почтовым адресом уже зарегистрирован.")
+         {/* alert("Пользователь с таким почтовым адресом уже зарегистрирован.") */}
+         setIsError1(true);
       }
     } else if(props.first === "Вход") {
         if(findUser) {
@@ -100,17 +105,18 @@ useEffect(() => {
               })
               .catch((error) => {
                 console.error(error);
-                alert("Произошла ошибка.");
+                {/*alert("Произошла ошибка.");*/}
+                setIsError(true);
               });
           } else {
-            alert("Неверный пароль");
+            {/* alert("Неверный пароль");*/}
+            setIsError2(true);
           }
         } else {
-          alert("Пользователь не найден. Пройдите регистрацию.")
+          {/*alert("Пользователь не найден. Пройдите регистрацию.")*/}
+          setIsError3(true);
         }
-    }
-
-  
+    }  
   };
 
   return (
@@ -128,6 +134,10 @@ useEffect(() => {
       <StyledBg>
         <StyledHeader>{props.first}</StyledHeader>
         <StyledInfo>
+        {isError && <p>Произошла ошибка. Пожалуйста, попробуйте еще раз.</p>}
+        {isError1 && <p>Пользователь с таким почтовым адресом уже зарегистрирован. Войдите.</p>}
+        {isError2 && <p>Неверный пароль. Пожалуйста, попробуйте еще раз. </p>}
+        {isError3 && <p>Пользователь не найден. Пройдите регистрацию. </p>}
         <form onSubmit={handleSubmit}>
           <StyledInput type="email" placeholder="Email" name="email" value={email} onChange={handleEmailChange} required/>
           <StyledInput type="password" placeholder="Пароль" name="password" value={password} onChange={handlePasswordChange} required/>

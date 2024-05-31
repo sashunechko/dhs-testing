@@ -12,6 +12,7 @@ export const InfoForm = () => {
     const [time, setTime] = useState('');
     const [specialist, setSpecialist] = useState('');
     const [isSuccess,setSuccess] = useState(false);
+    const [isError, setIsError] = useState(false);
     const defaultOptions = {
       loop: false,
       autoplay: true, 
@@ -63,7 +64,7 @@ export const InfoForm = () => {
         })
         .catch((error) => {
           console.error(error);
-          alert('Произошла ошибка :( ');
+          setIsError(true);
         });
   
       setName('');
@@ -75,6 +76,7 @@ export const InfoForm = () => {
   
     return (
         <Info>
+          {isError && <p>Произошла ошибка. Пожалуйста, попробуйте еще раз.</p>}
           {isSuccess && 
           <div>
             <Lottie options={defaultOptions}
