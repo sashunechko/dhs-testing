@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 
 import PropTypes from 'prop-types';
 import { URLs } from "../../__data__/urls";
-{/*import Lottie from 'react-lottie';
-import {Tip1} from '../../components/record/info/info.styled';
-import {StyledLink, StyledTip} from '../../components/result/result.styled';*/}
 import { StyledBg, StyledForm, StyledButton, StyledHeader, StyledInfo, StyledInput, ErrorMessage, Blank } from "./form.styled"; 
-import * as animationData from '../../../src/assets/succes-submit.json';
 import { useNavigate } from 'react-router-dom';
 export function Form(props) {
 
@@ -19,14 +15,6 @@ export function Form(props) {
   const [isError1, setIsError1] = useState(false); // пользователь уже зареган
   const [isError2, setIsError2] = useState(false); // неверный пароль
   const [isError3, setIsError3] = useState(false); // пользователь не найден
-  const defaultOptions = {
-    loop: false,
-    autoplay: true, 
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice'
-    }
-  };
 useEffect(() => {
   fetch(`${URLs.api.main}/users-data`)
       .then(response => response.json())
@@ -127,16 +115,6 @@ useEffect(() => {
 
   return (
     <StyledForm>
-      {/* {isSuccess &&
-      <div>
-      <Lottie options={defaultOptions}
-        height={400}
-        width={400}/>
-        <Tip1>
-        <StyledTip>вы успешно вошли</StyledTip>
-        <StyledLink to={URLs.ui.lk}>личный кабинет</StyledLink>
-        </Tip1>
-      </div> } */}
       <StyledBg>
         <StyledHeader>{props.first}</StyledHeader>
         <StyledInfo>

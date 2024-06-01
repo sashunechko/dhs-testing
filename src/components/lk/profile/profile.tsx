@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import {StyledPhoto, BgPhoto, BgBio, Info, Box, RedButton, Button, Text, MaxPhoto, Button1} from './profile.styled';
+import {StyledPhoto, BgPhoto, BgBio, Info, Box, RedButton, Text, MaxPhoto, Button1} from './profile.styled';
 import { useState } from 'react';
 
 export const Profile = ({ imgSrc }) => (

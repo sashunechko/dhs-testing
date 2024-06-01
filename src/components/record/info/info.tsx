@@ -108,7 +108,7 @@ export const InfoForm = () => {
             <Box type="time" placeholder="12-00" name="time" min="09:00" max="18:00"  value={time} onChange={handleTimeChange} required/>
             <Select name="фио специалиста" value={specialist} onChange={handleSpecialistChange}>
               {specialists.map(spec => 
-                <option value="">{spec.name}</option>
+                <option key={spec.id} value="">{spec.name}</option>
               )}
             </Select>
             <Button type="submit">Записаться</Button>
