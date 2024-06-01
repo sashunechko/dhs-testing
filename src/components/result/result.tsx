@@ -1,7 +1,10 @@
-import React, {useState, useEffect} from "react"
+import React, {useState, useEffect} from "react";
+import Lottie from 'react-lottie';
 import { URLs } from "../../__data__/urls";
-import {problem} from '../../assets';
 import { useSearchParams } from "react-router-dom";
+import * as animData1 from '../../../src/assets/sad-face.json';
+import * as animData2 from '../../../src/assets/calm.json';
+import * as animData3 from '../../../src/assets/happy.json';
 
 import {Section, StyledRes, StyledText, StyledDesc, Tip, StyledTip, StyledLink} from './result.styled';
 
@@ -27,6 +30,17 @@ export function Res() {
         return res;
     };
 
+    const data = [animData1, animData2, animData3];
+
+    const defaultOptions = {
+        loop: false,
+        autoplay: true, 
+        animationData: data[resultCounted(score)],
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice'
+        }
+      };
+
     useEffect(() => {
         fetch(`${URLs.api.main}/tests-data`)
             .then(response => response.json())
@@ -42,15 +56,17 @@ export function Res() {
 
     return(
     <>
-        <Section>
         <StyledRes>{title}</StyledRes>
+        <Section>
         <StyledText>{desc}</StyledText>
             <StyledDesc>
+                <Lottie options={defaultOptions}
+                    height={500}
+                    width={500}/>
                 <Tip>
                     <StyledTip>{tip}</StyledTip>
                     <StyledLink to={URLs.ui.record}>Запись</StyledLink>
                 </Tip>
-                <img src={problem} alt="Иллюстрация проблемы" />
             </StyledDesc>
         </Section>
     </>

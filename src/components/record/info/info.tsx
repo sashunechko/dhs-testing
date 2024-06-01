@@ -1,6 +1,6 @@
 import React from 'react';
 import Lottie from 'react-lottie';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { URLs } from "../../../__data__/urls";
 import {Info, Box, Select, Button, Tip1, Center} from './info.styled';
 import {StyledLink, StyledTip} from '../../../components/result/result.styled';
@@ -13,6 +13,18 @@ export const InfoForm = () => {
     const [specialist, setSpecialist] = useState('');
     const [isSuccess,setSuccess] = useState(false);
     const [isError, setIsError] = useState(false);
+    const [specialists, setSpecialists] = useState([]);
+
+    useEffect(() => {
+      fetch(`${URLs.api.main}/records-data`)
+          .then(response => response.json())
+          .then(data => {
+              setSpecialists(data.specialists);
+          })
+          .catch(error => {
+              console.error('Error fetching specialists data:', error);
+          });
+  }, []);
 
     const defaultOptions = {
       loop: false,
@@ -95,9 +107,9 @@ export const InfoForm = () => {
             <Box type="date" placeholder="дд.мм.гггг" name="date"  value={date} onChange={handleDateChange} required/>
             <Box type="time" placeholder="12-00" name="time" min="09:00" max="18:00"  value={time} onChange={handleTimeChange} required/>
             <Select name="фио специалиста" value={specialist} onChange={handleSpecialistChange}>
-                <option value="1">Иванов</option>
-                <option value="2">Петров</option>
-                <option value="3">Сидоров</option>
+              {specialists.map(spec => 
+                <option value="">{spec.name}</option>
+              )}
             </Select>
             <Button type="submit">Записаться</Button>
           </form> }
