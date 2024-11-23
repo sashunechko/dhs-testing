@@ -1,13 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
   
 import App from './app';
   
-const DefaultComponent = () => <App/>;
-DefaultComponent.displayName = 'DefaultComponent';
-
-export default DefaultComponent;
-
+export default () => <App/>;
   
 let rootElement: ReactDOM.Root
   

@@ -1,39 +1,40 @@
 {
-  "name": "dhs-testing",
-  "version": "1.0.0",
-  "description": "проект позволяет пройти психологические тесты и записаться к специалисту\r ## MVP1\r Главная страница(Харитонова Александра):\r 1) виджеты\r 2) общая информация",
-  "main": "./src/index.tsx",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ijl-cli server --port=8099 --with-open-browser",
-    "build": "npm run clean && ijl-cli build --dev",
-    "build:prod": "npm run clean && ijl-cli build",
-    "eslint": "npx eslint src",
-    "clean": "rimraf dist"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@emotion/styled": "^11.11.5",
-    "@ijl/cli": "^5.1.0",
-    "@types/react": "^18.3.2",
-    "@types/react-dom": "^18.2.24",
-    "express": "^4.19.2",
-    "props": "^0.3.0",
-    "react": "^18.2.0",
-    "react-calendar": "^5.0.0",
-    "react-dom": "^18.2.0",
-    "react-error-boundary": "^4.0.13",
-    "react-lottie": "^1.2.4",
-    "react-router-dom": "^6.23.1",
-    "typescript": "^5.4.4"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.3.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.1",
-    "globals": "^15.3.0",
-    "typescript-eslint": "^7.10.0"
-  }
+    "name": "dhs-testing",
+    "version": "1.0.0",
+    "description": "проект позволяет пройти психологические тесты и записаться к специалисту\r ## MVP1\r Главная страница(Харитонова Александра):\r 1) виджеты\r 2) общая информация",
+    "main": "./src/index.tsx",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "brojs server --port=8099 --with-open-browser",
+        "build": "npm run clean && brojs build --dev",
+        "build:prod": "npm run clean && brojs build",
+        "eslint": "npx eslint src",
+        "clean": "rimraf dist"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@brojs/cli": "^1.0.0",
+        "@emotion/styled": "^11.11.5",
+        "@ijl/cli": "^5.1.0",
+        "@types/react": "^18.3.2",
+        "@types/react-dom": "^18.2.24",
+        "express": "^4.19.2",
+        "props": "^0.3.0",
+        "react": "^18.3.1",
+        "react-calendar": "^5.0.0",
+        "react-dom": "^18.3.1",
+        "react-error-boundary": "^4.0.13",
+        "react-lottie": "^1.2.4",
+        "react-router-dom": "^6.23.1",
+        "typescript": "^5.4.4"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.3.0",
+        "eslint": "^8.57.0",
+        "eslint-plugin-react": "^7.34.1",
+        "globals": "^15.3.0",
+        "typescript-eslint": "^7.10.0"
+    }
 }

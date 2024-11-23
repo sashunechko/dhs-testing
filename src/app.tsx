@@ -1,22 +1,14 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { PageRoutes } from './routes';
-import { Global } from "@emotion/react";
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
 
-import ErrorBoundary from "./components/error-boundary"
-import { GlobalStyles } from './global-styles';
+import { Dashboard } from './dashboard';
 
 const App = () => {
-
   return (
-    <ErrorBoundary>
-      <BrowserRouter>
-        <Global styles={GlobalStyles} />
-        <PageRoutes />
-      </BrowserRouter>
-    </ErrorBoundary>
+    <BrowserRouter>
+      <Dashboard />
+    </BrowserRouter>
   );
-
 };
 
 export default App;
