@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import * as animData1 from '../../../src/assets/sad-face.json';
 import * as animData2 from '../../../src/assets/calm.json';
 import * as animData3 from '../../../src/assets/happy.json';
+import { mainApi } from "../../__data__/service/main-api";
 
 import {Section, StyledRes, StyledText, StyledDesc, Tip, StyledTip, StyledLink} from './result.styled';
 
@@ -41,18 +42,28 @@ export function Res() {
         }
       };
 
+    const testData = mainApi.useGetTestDataQuery().data
+    const res = resultCounted(score);
+    const titleFromTestData = testData?.tests[id].result[res].title
+    const descriptionFromTestData = testData?.tests[id].results[res].description
+    
     useEffect(() => {
-        fetch(`${URLs.api.main}/tests-data`)
-            .then(response => response.json())
-            .then(data => {
-                const res = resultCounted(score);
-                setTitle(data.tests[id].results[res].title);
-                setDesc(data.tests[id].results[res].description);
-            })
-            .catch(error => {
-                console.error('Error fetching results data:', error);
-            });
-    }, []);
+        setTitle(titleFromTestData)
+        setDesc(descriptionFromTestData)
+    }, [titleFromTestData, descriptionFromTestData])
+
+    // useEffect(() => {
+    //     fetch(`${URLs.api.main}/tests-data`)
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             const res = resultCounted(score);
+    //             setTitle(data.tests[id].results[res].title);
+    //             setDesc(data.tests[id].results[res].description);
+    //         })
+    //         .catch(error => {
+    //             console.error('Error fetching results data:', error);
+    //         });
+    // }, []);
 
     return(
     <>

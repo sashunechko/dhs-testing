@@ -1,26 +1,21 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect, useState} from "react";
 
 import {Table, StyledRectangle, StyledLink} from "./list-of-tests.styled";
 import {StyledSort} from "../filters/filters.styled";
 import {StyledForm, StyledInput} from "../search-form/search-form.styled";
 import {URLs} from "../../../__data__/urls";
+import { mainApi } from "../../../__data__/service/main-api";
 
 export function List() {
+    const testData = mainApi.useGetTestDataQuery().data
+    const titles = testData?.titles
+
     const [data, setData] = useState([]);
-    const [initData, setInitData] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
-        fetch(`${URLs.api.main}/tests-data`)
-            .then(response => response.json())
-            .then(data => {
-                setData(data.titles);
-                setInitData(data.titles);
-            })
-            .catch(error => {
-                console.error('Error fetching test data:', error);
-            });
-    }, []);
+        setData(titles)
+    }, [titles])
 
     const [sortValue, setSortValue] = useState("По алфавиту");
     const [filterValue, setFilterValue] = useState("Без фильтра");
@@ -39,9 +34,9 @@ export function List() {
     const handleFilterChange = (event) => {
         setFilterValue(event.target.value);
         if (event.target.value === "Без фильтра") {
-            setData(initData);
+            setData(titles);
         } else {
-            const res = initData.filter(test => test.filter === event.target.value);
+            const res = titles.filter(test => test.filter === event.target.value);
             setData(res);
         }
     };
@@ -50,7 +45,8 @@ export function List() {
         setSearchQuery(event.target.value);
     };
 
-    const filteredData = data.filter(test =>
+    console.log(data)
+    const filteredData = data?.filter(test =>
         test.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
@@ -86,7 +82,7 @@ export function List() {
             </StyledForm>
 
             <Table>
-                {filteredData.map(test => 
+                {filteredData?.map(test => 
                     <StyledRectangle key={test.id}>
                         <StyledLink to={`${URLs.ui.q}?id=${test.id}`}>{test.name} ( {test.executionTime} мин. ) </StyledLink>
                     </StyledRectangle>

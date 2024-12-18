@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react"
 import { URLs } from "../../__data__/urls";
 import { useSearchParams } from "react-router-dom";
 import {Page, Results, StyledLink, Card, Question, Number, Options, Opt} from './test.styled';
+import { mainApi } from "../../__data__/service/main-api";
 
 export function Questions() {
 
@@ -13,17 +14,14 @@ export function Questions() {
     const [searchParams] = useSearchParams();
     const id = searchParams.get('id');
 
+    const testData = mainApi.useGetTestDataQuery().data
+    const optionsFromTestData = testData?.options
+    const questionsFromTestData = testData?.tests[id].questions
+
     useEffect(() => {
-      fetch(`${URLs.api.main}/tests-data`)
-          .then(response => response.json())
-          .then(data => {
-              setOptions(data.options);
-              setQuestions(data.tests[id].questions);
-          })
-          .catch(error => {
-              console.error('Error fetching test data:', error);
-          });
-    }, []);
+      setOptions(optionsFromTestData)
+      setQuestions(questionsFromTestData)
+    }, [optionsFromTestData, questionsFromTestData])
 
     const optionClicked = (count) => {
         setScore(score + count);
@@ -52,7 +50,7 @@ export function Questions() {
               <Number>Вопрос {currentQuestion + 1} / {questions.length}</Number>
 
               <Options>
-                {options.map((option) => {
+                {options?.map((option) => {
                   return (
                     <Opt
                       key={option.count}
