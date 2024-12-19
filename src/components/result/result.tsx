@@ -44,8 +44,8 @@ export function Res() {
 
     const testData = mainApi.useGetTestDataQuery().data
     const res = resultCounted(score);
-    const titleFromTestData = testData?.tests[id].result[res].title
-    const descriptionFromTestData = testData?.tests[id].results[res].description
+    const titleFromTestData = testData?.tests[id]?.results[res]?.title
+    const descriptionFromTestData = testData?.tests[id]?.results[res]?.description
     
     useEffect(() => {
         setTitle(titleFromTestData)

@@ -1,3 +1,4 @@
+import { Results } from './../../components/test/test.styled';
 export type RecordsData = {
     dates?: Date[]
     specialists?: Specialist[]
@@ -12,10 +13,10 @@ export type Specialist = {
 }
 
 export type ResultsData = {
-    titles?: Title[]
+    titles?: ResultsTitle[]
 }
 
-export type Title = {
+export type ResultsTitle = {
     id: bigint
     name: string
     flag: boolean
