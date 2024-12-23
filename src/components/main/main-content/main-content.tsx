@@ -8,6 +8,7 @@ import {Title} from "../title";
 import {ParTwo} from "../par-two";
 import {Par} from "../par-one";
 import {Button} from "../button";
+import {Chat} from "../chatbutton";
 import {RegButton} from "../reg-button";
 import {MainContent, Wrapper} from '../../lk/main-lk/main.styled';
 import { URLs } from "../../../__data__/urls";
@@ -18,15 +19,15 @@ const nav = {
     reg: { title: "РЕГИСТРАЦИЯ", href: URLs.ui.registration },
 }
 
-import { lotos} from '../../../assets';
-import { girl} from '../../../assets';
-import { psyho} from '../../../assets';
+import { lotos, girl, psyho} from '../../../assets';
+import chat from '../../../a/chat.svg';
 
 export class MainBody extends React.Component{
     render(){
         return (
             <>
             <MainContent>
+                
                 <Wrapper>
 
                 <Card>
@@ -54,7 +55,8 @@ export class MainBody extends React.Component{
                 </Card>
                 
                 </Wrapper>
-            </MainContent>  
+                <Chat src={chat} />
+            </MainContent> 
             </>
         )
     }
