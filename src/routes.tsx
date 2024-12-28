@@ -10,6 +10,7 @@ import Reg from './pages/registration'
 import Enter from './pages/enter'
 import Result from './pages/result'
 import Test from './pages/test'
+import PsychoPage from './pages/listPsycho'
 
 export const PageRoutes = () => (
     <Routes>
@@ -22,7 +23,7 @@ export const PageRoutes = () => (
         {URLs.ui.enter && <Route path={URLs.ui.enter} element={<Enter />} />}
         {URLs.ui.result && <Route path={URLs.ui.result} element={<Result />} />}
         {URLs.ui.q && <Route path={URLs.ui.q} element={<Test />} />}
-
+        {URLs.ui.listPsycho && <Route path={URLs.ui.listPsycho} element={<PsychoPage />} />}
         <Route path="*" element={<h1>Page not found</h1>} />
     </Routes>
 )

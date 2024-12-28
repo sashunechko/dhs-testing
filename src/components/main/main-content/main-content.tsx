@@ -17,10 +17,14 @@ const nav = {
     testlist: { title: "К ТЕСТАМ!", href: URLs.ui.testlist },
     lk: { title: "ЛИЧНЫЙ КАБИНЕТ", href: URLs.ui.lk },
     reg: { title: "РЕГИСТРАЦИЯ", href: URLs.ui.registration },
+    listPsycho: { title: "здесь", href: URLs.ui.listPsycho},
 }
+
+console.log(nav)
 
 import { lotos, girl, psyho} from '../../../assets';
 import chat from '../../../a/chat.svg';
+import { Link } from "react-router-dom";
 
 export class MainBody extends React.Component{
     render(){
@@ -49,7 +53,8 @@ export class MainBody extends React.Component{
                     <Title text="РЕГИСТРАЦИЯ И КОНСУЛЬТАЦИИ" />
                     <Content>
                         <RegButton text={nav.reg.title} href={nav.reg.href} />
-                        <Par text="Дает возможность: сохранять и просматривать результаты тестирований, записываться к специалисту, следить за графиком консультаций" />
+                        <Par text="Дает возможность: сохранять и просматривать результаты тестирований, записываться к специалисту, следить за графиком консультаций. Посмотреть анкеты психологов можно" />
+                        <Link to={nav.listPsycho.href}> {nav.listPsycho.title} </Link>
                     </Content>
                     <Image1 src={psyho} alt="Консультация психолога" />
                 </Card>

@@ -11,7 +11,8 @@ export const URLs = {
       record: getNavigationValue('dhs-testing.record') && `${baseUrl}${getNavigationValue('dhs-testing.record')}`,
       q: getNavigationValue('dhs-testing.q') && `${baseUrl}${getNavigationValue('dhs-testing.q')}`,
       lk: getNavigationValue('dhs-testing.lk') && `${baseUrl}${getNavigationValue('dhs-testing.lk')}`,
-      result: getNavigationValue('dhs-testing.result') && `${baseUrl}${getNavigationValue('dhs-testing.result')}`
+      result: getNavigationValue('dhs-testing.result') && `${baseUrl}${getNavigationValue('dhs-testing.result')}`,
+      listPsycho: getNavigationValue('dhs-testing.listPsycho') && `${baseUrl}${getNavigationValue('dhs-testing.listPsycho')}`
     },
     api: {
       main: getConfigValue('dhs-testing.api')

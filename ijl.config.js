@@ -17,7 +17,8 @@ module.exports = {
     "dhs-testing.enter": "/enter",
     "dhs-testing.registration": "/registration",
     "dhs-testing.q": "/q",
-    "dhs-testing.result": "/result"
+    "dhs-testing.result": "/result",
+    "dhs-testing.listPsycho": "/listPsycho"
   },
   features: {
     'dhs-testing': {
