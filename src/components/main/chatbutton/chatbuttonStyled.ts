@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 export const ChatButton = styled.button`
@@ -35,7 +36,7 @@ export const MessageArea = styled.div`
   overflow-y: auto;
 `;
 
-export const Message = styled.p`
+export const Message = styled.p<{isAnswer: boolean}>`
   margin: 10px 0;
   padding: 10px;
   background-color: #fff;
@@ -44,6 +45,12 @@ export const Message = styled.p`
   word-wrap: break-word;
   float: right; 
   clear: both;
+
+  ${({isAnswer}) =>
+    isAnswer && css`
+      background-color: #d8f084;
+      float: left`
+  }
 `;
 
 export const InputField = styled.input`

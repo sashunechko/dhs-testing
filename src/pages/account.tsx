@@ -1,11 +1,11 @@
 import React from "react";
 
 import {Header} from "../components/header";
-import {Nav} from "../components/lk/nav-lk";
+import {Nav} from "../components/lk/navAccount";
 import {Footer} from "../components/footer";
-import {Main} from "../components/lk/main-lk";
+import {Main} from "../components/lk/mainAccount";
 
-export const Lk = () => {
+export const Account = () => {
   return (
     <>
     <Header/>
@@ -15,4 +15,4 @@ export const Lk = () => {
     </>
   );
 };
-export default Lk;
+export default Account;

@@ -10,7 +10,7 @@ import {Par} from "../par-one";
 import {Button} from "../button";
 import {Chat} from "../chatbutton";
 import {RegButton} from "../reg-button";
-import {MainContent, Wrapper} from '../../lk/main-lk/main.styled';
+import {MainContent, Wrapper} from '../../lk/mainAccount/main.styled';
 import { URLs } from "../../../__data__/urls";
 
 const nav = {

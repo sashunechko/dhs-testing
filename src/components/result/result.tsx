@@ -5,7 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import * as animData1 from '../../../src/assets/sad-face.json';
 import * as animData2 from '../../../src/assets/calm.json';
 import * as animData3 from '../../../src/assets/happy.json';
-import { mainApi } from "../../__data__/service/main-api";
+import { mainApi } from "../../__data__/service/mainApi";
 
 import {Section, StyledRes, StyledText, StyledDesc, Tip, StyledTip, StyledLink} from './result.styled';
 

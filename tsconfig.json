@@ -13,7 +13,7 @@
         "target": "es6",
         "jsx": "react",
         "typeRoots": ["node_modules/@types", "src/typings"],
-        "types" : ["webpack-env", "node"],
+        "types" : ["node"],
         "resolveJsonModule": true
     },
     "exclude": [

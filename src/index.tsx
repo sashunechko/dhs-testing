@@ -7,7 +7,6 @@ const DefaultComponent = () => <App/>;
 DefaultComponent.displayName = 'DefaultComponent';
 
 export default DefaultComponent;
-
   
 let rootElement: ReactDOM.Root
   

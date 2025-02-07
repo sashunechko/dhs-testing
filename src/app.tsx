@@ -4,7 +4,7 @@ import { PageRoutes } from './routes';
 import { Global } from "@emotion/react";
 
 import ErrorBoundary from "./components/error-boundary"
-import { GlobalStyles } from './global-styles';
+import { GlobalStyles } from './globalStyles';
 import { Provider } from 'react-redux';
 import { store } from './__data__/store';
 

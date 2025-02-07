@@ -33,3 +33,6 @@ export const StyledLink = styled(Link)`
         opacity: .75;
     }
 `;
+
+export const LocalesButton = styled.button`
+`;

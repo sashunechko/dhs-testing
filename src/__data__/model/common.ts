@@ -1,4 +1,7 @@
-import { Results } from './../../components/test/test.styled';
+export type GigaChatMessage = {
+    message: string
+}
+
 export type RecordsData = {
     dates?: Date[]
     specialists?: Specialist[]
@@ -36,10 +39,8 @@ export type FormData = {
 
 //в ответе надо будет отдавать User[], судя по json
 export type User = {
+    name: string
     email: string
-    first_name: string
-    second_name: string
-    password: string
 }
 
 export type TestData = {
@@ -78,4 +79,18 @@ export type DefaultResponse = {
 export type SubmitForm = {
     email: string
     password: string
+}
+
+export type SubmitFormResponse = {
+    status: string
+    user?: User
+    message?: string
+}
+
+export type BaseResponse<Data> = {
+    success: true
+    body?: Data
+} | {
+    success: false
+    error: string
 }

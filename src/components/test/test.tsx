@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react"
 import { URLs } from "../../__data__/urls";
 import { useSearchParams } from "react-router-dom";
 import {Page, Results, StyledLink, Card, Question, Number, Options, Opt} from './test.styled';
-import { mainApi } from "../../__data__/service/main-api";
+import { mainApi } from "../../__data__/service/mainApi";
 
 export function Questions() {
 

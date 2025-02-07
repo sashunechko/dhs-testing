@@ -2,7 +2,7 @@ import React from "react"
 import { URLs } from "../../../__data__/urls";
 import { useEffect } from "react";
 import {useState} from "react";
-import {StyledNav, Button, LinkContrast, StyledLink, WhiteBox, TextWhiteBox, EmptyBox, PaleBox, Container,CalendarContainer,PaleBoxContainer} from './nav-lk.styled';
+import {StyledNav, Button, LinkContrast, StyledLink, WhiteBox, TextWhiteBox, EmptyBox, PaleBox, Container,CalendarContainer,PaleBoxContainer} from './navAccount.styled';
 import Calendar from 'react-calendar';
 
 export function Nav() {

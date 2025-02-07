@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 
-import {Profile} from "../../lk/profile";
+import {Profile} from "../profile";
 
 import { person} from '../../../assets';
 

@@ -10,7 +10,7 @@ export const URLs = {
       registration: getNavigationValue('dhs-testing.registration') && `${baseUrl}${getNavigationValue('dhs-testing.registration')}`,
       record: getNavigationValue('dhs-testing.record') && `${baseUrl}${getNavigationValue('dhs-testing.record')}`,
       q: getNavigationValue('dhs-testing.q') && `${baseUrl}${getNavigationValue('dhs-testing.q')}`,
-      lk: getNavigationValue('dhs-testing.lk') && `${baseUrl}${getNavigationValue('dhs-testing.lk')}`,
+      account: getNavigationValue('dhs-testing.account') && `${baseUrl}${getNavigationValue('dhs-testing.account')}`,
       result: getNavigationValue('dhs-testing.result') && `${baseUrl}${getNavigationValue('dhs-testing.result')}`
     },
     api: {

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import './button-styled';
-import { LinkButton, LinkContrastButton } from './button-styled';
+import './buttonStyled';
+import { LinkButton, LinkContrastButton } from './buttonStyled';
 
 interface ButtonProps {
     text: string;

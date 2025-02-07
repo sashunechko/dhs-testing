@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
-import { ChatButton, FormContainer, InputField, SubmitButton, Message, MessageArea } from './chatbutton-styled';
+import { ChatButton, FormContainer, InputField, SubmitButton, Message, MessageArea } from './chatbuttonStyled';
+import { mainApi } from '../../../__data__/service/mainApi';
 
 interface ChatProps { 
   src: string;
 }
+
+
+
 export const Chat: React.FC<ChatProps> = ({ src }) => {
   const [isFormVisible, setIsFormVisible] = useState(false);
-  const [messages, setMessages] = useState<string[]>([]);
+  const [messages, setMessages] = useState<{message: string, isAnswer: boolean}[]>([]);
   const [message, setMessage] = useState('');
+  const [getGigaChat, getGigaChatRequest] = mainApi.useGigaChatMutation()
 
   const handleChatButtonClick = () => {
     setIsFormVisible(!isFormVisible);
@@ -17,13 +22,15 @@ export const Chat: React.FC<ChatProps> = ({ src }) => {
     setMessage(event.target.value);
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (message.trim()) {
-      setMessages([...messages, message]);
-      setMessage('');
+      const answerData = await getGigaChat({"message": message});
+      const answer = answerData.data?.message;
+      setMessages([...messages, {message, isAnswer: false}, {message: answer, isAnswer: true}]);
     }
   };
+
 
   return (
     <>
@@ -33,8 +40,8 @@ export const Chat: React.FC<ChatProps> = ({ src }) => {
       {isFormVisible && (
         <FormContainer>
           <MessageArea>
-            {messages.map((msg, index) => (
-              <Message key={index}>{msg}</Message>
+            {messages.map(({message, isAnswer}, index) => (
+              <Message isAnswer={isAnswer} key={index}>{message}</Message>
             ))}
           </MessageArea>
           <form onSubmit={handleSubmit}>

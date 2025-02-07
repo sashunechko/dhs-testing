@@ -4,7 +4,7 @@ import {Table, StyledRectangle, StyledLink} from "./list-of-tests.styled";
 import {StyledSort} from "../filters/filters.styled";
 import {StyledForm, StyledInput} from "../search-form/search-form.styled";
 import {URLs} from "../../../__data__/urls";
-import { mainApi } from "../../../__data__/service/main-api";
+import { mainApi } from "../../../__data__/service/mainApi";
 
 export function List() {
     const testData = mainApi.useGetTestDataQuery().data

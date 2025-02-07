@@ -13,8 +13,10 @@ import {
   ErrorMessage,
   Blank,
 } from "./form.styled";
+
 import { useNavigate } from "react-router-dom";
-import { mainApi } from "../../__data__/service/main-api";
+import { mainApi } from "../../__data__/service/mainApi";
+
 export function Form(props) {
   const [users, setUsers] = useState([]);
   const [isSuccess, setSuccess] = useState(false);
@@ -24,24 +26,15 @@ export function Form(props) {
   const [isError1, setIsError1] = useState(false); // пользователь уже зареган
   const [isError2, setIsError2] = useState(false); // неверный пароль
   const [isError3, setIsError3] = useState(false); // пользователь не найден
+
+  const [login, loginRequest] = mainApi.useSubmitEnterMutation()
+  const [registration, registrationRequest] = mainApi.useSubmitRegMutation()
   
   const usersData = mainApi.useGetUsersDataQuery().data
   
   useEffect(() => {
     setUsers(usersData)
   }, [usersData])
-
-  // useEffect(() => {
-  //   fetch(`${URLs.api.main}/users-data`)
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setUsers(data);
-  //       console.log(data)
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching users:", error);
-  //     });
-  // }, []);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -54,88 +47,101 @@ export function Form(props) {
     setPassword(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setIsError(false);
     setIsError1(false);
     setIsError2(false);
     setIsError3(false);
 
-    const formData = {
-      email,
-      password,
-    };
-
-    const findUser = users?.find((user) => user.eMail === email);
-
     if (props.first === "Регистрация") {
-      if (!findUser) {
-        fetch(`${URLs.api.main}/submit-reg`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log(data);
-            setSuccess(true);
-            if (success) {
-              navigate(URLs.ui.lk);
-            }
-          })
-          .catch((error) => {
-            console.error(error);
-            {
-              /*alert("Произошла ошибка.");*/
-            }
-            setIsError(true);
-          });
+      const registrationResult = await registration({"email": email, "password": password})
+
+      if (registrationResult?.data?.status === "success") {
+        localStorage.setItem('name', registrationResult.data?.user?.name);
+        navigate(URLs.ui.account);
       } else {
-        {
-          /* alert("Пользователь с таким почтовым адресом уже зарегистрирован.") */
-        }
-        setIsError1(true);
+        setIsError(true)
       }
-    } else if (props.first === "Вход") {
-      if (findUser) {
-        if (findUser.password === password) {
-          fetch(`${URLs.api.main}/submit-enter`, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              console.log(data);
-              setSuccess(true);
-              if (success) {
-                navigate(URLs.ui.lk);
-              }
-            })
-            .catch((error) => {
-              console.error(error);
-              {
-                /*alert("Произошла ошибка.");*/
-              }
-              setIsError(true);
-            });
-        } else {
-          {
-            /* alert("Неверный пароль");*/
-          }
-          setIsError2(true);
-        }
+    } else {
+      const loginResult = await login({"email": email, "password": password})
+
+      if (loginResult?.data?.status === "success") {
+        localStorage.setItem('name', loginResult.data?.user?.name);
+        navigate(URLs.ui.account);
       } else {
-        {
-          /*alert("Пользователь не найден. Пройдите регистрацию.")*/
-        }
         setIsError3(true);
       }
     }
+
+    // if (props.first === "Регистрация") {
+    //   if (!findUser) {
+    //     fetch(`${URLs.api.main}/submit-reg`, {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify(formData),
+    //     })
+    //       .then((response) => response.json())
+    //       .then((data) => {
+    //         console.log(data);
+    //         setSuccess(true);
+    //         if (success) {
+    //           navigate(URLs.ui.lk);
+    //         }
+    //       })
+    //       .catch((error) => {
+    //         console.error(error);
+    //         {
+    //           /*alert("Произошла ошибка.");*/
+    //         }
+    //         setIsError(true);
+    //       });
+    //   } else {
+    //     {
+    //       /* alert("Пользователь с таким почтовым адресом уже зарегистрирован.") */
+    //     }
+    //     setIsError1(true);
+    //   }
+    // } else if (props.first === "Вход") {
+    //   if (findUser) {
+    //     if (findUser.password === password) {
+    //       fetch(`${URLs.api.main}/submit-enter`, {
+    //         method: "POST",
+    //         headers: {
+    //           "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify(formData),
+    //       })
+    //         .then((response) => response.json())
+    //         .then((data) => {
+    //           console.log(data);
+    //           setSuccess(true);
+    //           if (success) {
+    //             navigate(URLs.ui.lk);
+    //           }
+    //         })
+    //         .catch((error) => {
+    //           console.error(error);
+    //           {
+    //             /*alert("Произошла ошибка.");*/
+    //           }
+    //           setIsError(true);
+    //         });
+    //     } else {
+    //       {
+    //         /* alert("Неверный пароль");*/
+    //       }
+    //       setIsError2(true);
+    //     }
+    //   } else {
+    //     {
+    //       /*alert("Пользователь не найден. Пройдите регистрацию.")*/
+    //     }
+    //     setIsError3(true);
+    //   }
+    // }
   };
 
   const Error = isError || isError1 || isError2 || isError3;

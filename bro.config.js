@@ -12,7 +12,7 @@ module.exports = {
     "dhs-testing.main": "/dhs-testing",
     "dhs-testing.testlist": "/testlist",
     "dhs-testing.first": "/main",
-    "dhs-testing.lk": "/lk",
+    "dhs-testing.account": "/account",
     "dhs-testing.record": "/record",
     "dhs-testing.enter": "/enter",
     "dhs-testing.registration": "/registration",
