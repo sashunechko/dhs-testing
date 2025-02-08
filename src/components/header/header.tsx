@@ -7,42 +7,37 @@ import {logo} from "../../assets";
 import { HeaderBlock, HeaderWrapper, LocalesButton, StyledLink, Wrapper } from "./header.styled";
 
 import { URLs } from "../../__data__/urls";
-import { useTranslation } from 'react-i18next'
+import i18n from "../../i18n";
 
 const nav = {
-    testlist: { title: "ТЕСТЫ", href: URLs.ui.testlist },
+    testlist: { title: "Тесты", href: URLs.ui.testlist },
     lk: { title: "ЛИЧНЫЙ КАБИНЕТ", href: URLs.ui.account },
     enter: { title: "ВХОД", href: URLs.ui.enter }
 }
 
-const changeLanguageToRu = () => {
-    // i18n.changeLanguage('ru')
-}
+export function Header() {
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+        console.log(lng)
+    };
 
-const changeLanguageToEn = () => {
-    // i18n.changeLanguage('en')
-}
-
-export class Header extends React.Component{
-    render(){
-        return (
-            <>
-            <HeaderBlock>
-                <Wrapper>
-                    <HeaderWrapper>
-                    <Link to={URLs.ui.main}>
-                                <img src={logo} alt="Логотип. PsycologyTesting"/>
-                    </Link>
-                    <nav>
-                        <LocalesButton onClick={changeLanguageToRu}>ru</LocalesButton>
-                        <LocalesButton onClick={changeLanguageToEn}>en</LocalesButton>
-                        <StyledLink to={nav.testlist.href}>{nav.testlist.title}</StyledLink>
-                        <StyledLink to={nav.lk.href}>{nav.lk.title}</StyledLink>
-                    </nav>
-                    </HeaderWrapper>
-                </Wrapper>
-            </HeaderBlock>   
-            </>
-            )
-    }
+    return (
+        <>
+        <HeaderBlock>
+            <Wrapper>
+                <HeaderWrapper>
+                <Link to={URLs.ui.main}>
+                            <img src={logo} alt="Логотип. PsycologyTesting"/>
+                </Link>
+                <nav>
+                    <StyledLink to={nav.testlist.href}>{i18n.t('tests')}</StyledLink>
+                    <StyledLink to={nav.lk.href}>{i18n.t('account')}</StyledLink>
+                    <LocalesButton onClick={() => changeLanguage('ru')}>ru</LocalesButton>
+                    <LocalesButton onClick={() => changeLanguage('en')}>en</LocalesButton>
+                </nav>
+                </HeaderWrapper>
+            </Wrapper>
+        </HeaderBlock>   
+        </>
+        )
 }

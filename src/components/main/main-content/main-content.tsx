@@ -15,7 +15,7 @@ import { URLs } from "../../../__data__/urls";
 
 const nav = {
     testlist: { title: "К ТЕСТАМ!", href: URLs.ui.testlist },
-    lk: { title: "ЛИЧНЫЙ КАБИНЕТ", href: URLs.ui.lk },
+    lk: { title: "ЛИЧНЫЙ КАБИНЕТ", href: URLs.ui.account },
     reg: { title: "РЕГИСТРАЦИЯ", href: URLs.ui.registration },
 }
 

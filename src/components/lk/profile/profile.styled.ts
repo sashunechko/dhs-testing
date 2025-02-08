@@ -60,10 +60,11 @@ export const Button = styled.button`
 
 export const Button1 = styled.button`
     margin-left: 190px;
+    margin-bottom: 10px;
     width: 310px;
     height: 59px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    background: var(--main);
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
 `;
 
 export const Text = styled.p`

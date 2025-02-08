@@ -12,7 +12,7 @@ export const Chat: React.FC<ChatProps> = ({ src }) => {
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [messages, setMessages] = useState<{message: string, isAnswer: boolean}[]>([]);
   const [message, setMessage] = useState('');
-  const [getGigaChat, getGigaChatRequest] = mainApi.useGigaChatMutation()
+  const [getGigaChat] = mainApi.useGigaChatMutation()
 
   const handleChatButtonClick = () => {
     setIsFormVisible(!isFormVisible);

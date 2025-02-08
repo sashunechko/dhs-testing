@@ -18,7 +18,7 @@ export const Button = styled.button`
 `
 
 export const LinkContrast = styled.p`
-    font-family: 'Inter';
+    /* font-family: 'Inter'; */
     font-weight: 500;
     font-size: 32px;
     color: var(--text-contrast);
@@ -27,7 +27,7 @@ export const LinkContrast = styled.p`
 `
 
 export const StyledLink = styled(Link)`
-    font-family: 'Inter';
+    /* font-family: 'Inter'; */
     font-weight: 500;
     font-size: 32px;
     color: var(--text-contrast);

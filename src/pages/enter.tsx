@@ -5,6 +5,7 @@ import { URLs } from "../__data__/urls";
 import {Header} from "../components/header";
 import {Form} from "../components/enter-form";
 import {Footer} from "../components/footer";
+import i18n from "../i18n";
 
 export const Enter = () => {
   return (
@@ -12,7 +13,7 @@ export const Enter = () => {
       <title>Вход</title>
       <body>
           <Header/>
-          <Form first='Вход' second='Войти' text='Регистрация' href={URLs.ui.registration}/>
+          <Form first={i18n.t('in')} second={i18n.t('in')} text={i18n.t('reg')} href={URLs.ui.registration}/>
           <Footer/>
       </body>
     </>

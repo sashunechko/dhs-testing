@@ -37,6 +37,7 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^6.23.1",
     "redux": "^5.0.1",
+    "tsc": "^2.0.4",
     "typescript": "^5.4.4"
   },
   "devDependencies": {

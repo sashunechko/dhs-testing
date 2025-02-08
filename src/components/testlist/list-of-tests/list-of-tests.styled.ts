@@ -8,7 +8,7 @@ export const StyledRectangle = styled.div`
     border: 1px solid;
     margin-left: 1%;
     margin-bottom: 5%;
-    background: var(--main-transparent);
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: var(--text);
     text-align: center;
     line-height: 70px;
@@ -19,6 +19,6 @@ export const Table = styled.div`
 `;
 
 export const StyledLink = styled(Link)`
-    color: var(--main);
-    text-decoration: underline;
+    color: white;
+    text-decoration: none;
 `;

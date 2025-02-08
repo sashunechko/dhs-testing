@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { TestData, User, RecordsData, ResultsData, SubmitForm, FormData, GigaChatMessage, SubmitFormResponse} from '../model/common'
+import { TestData, User, RecordsData, ResultsData, SubmitForm, FormData, GigaChatMessage } from '../model/common'
 import { URLs } from '../urls'
 
 const baseUrl = URLs.api.main
@@ -27,14 +27,14 @@ export const mainApi = createApi({
         body: message
       })
     }),
-    submitEnter: builder.mutation<SubmitFormResponse, Pick<SubmitForm, 'email' | 'password'>>({
+    submitEnter: builder.mutation<User, Pick<SubmitForm, 'email' | 'password'>>({
       query: (body) => ({
         url: '/submit-enter',
         method: 'POST',
         body,
       })
     }),
-    submitReg: builder.mutation<SubmitFormResponse, Pick<SubmitForm, 'email' | 'password'>>({
+    submitReg: builder.mutation<User, Pick<SubmitForm, 'email' | 'password'>>({
       query: (body) => ({
         url: '/submit-reg',
         method: 'POST',

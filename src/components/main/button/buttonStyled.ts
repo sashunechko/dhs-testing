@@ -6,12 +6,12 @@ export const LinkButton = styled.button`
     width: 367px;
     height: 92px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-    background: var(--main);
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     text-align: center;
 `;
 
 export const LinkContrastButton = styled(Link)`
-    font-family: 'Inter';
+    /* font-family: 'Inter'; */
     font-weight: 500;
     font-size: 32px;
     color: var(--text-contrast);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 import PropTypes from "prop-types";
@@ -18,23 +18,14 @@ import { useNavigate } from "react-router-dom";
 import { mainApi } from "../../__data__/service/mainApi";
 
 export function Form(props) {
-  const [users, setUsers] = useState([]);
-  const [isSuccess, setSuccess] = useState(false);
-  const [success] = useState(true);
   const navigate = useNavigate();
   const [isError, setIsError] = useState(false); // ошибка
   const [isError1, setIsError1] = useState(false); // пользователь уже зареган
   const [isError2, setIsError2] = useState(false); // неверный пароль
   const [isError3, setIsError3] = useState(false); // пользователь не найден
 
-  const [login, loginRequest] = mainApi.useSubmitEnterMutation()
-  const [registration, registrationRequest] = mainApi.useSubmitRegMutation()
-  
-  const usersData = mainApi.useGetUsersDataQuery().data
-  
-  useEffect(() => {
-    setUsers(usersData)
-  }, [usersData])
+  const [login] = mainApi.useSubmitEnterMutation()
+  const [registration] = mainApi.useSubmitRegMutation()
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -56,22 +47,12 @@ export function Form(props) {
 
     if (props.first === "Регистрация") {
       const registrationResult = await registration({"email": email, "password": password})
-
-      if (registrationResult?.data?.status === "success") {
-        localStorage.setItem('name', registrationResult.data?.user?.name);
-        navigate(URLs.ui.account);
-      } else {
-        setIsError(true)
-      }
+      localStorage.setItem('name', registrationResult.data?.name);
+      navigate(URLs.ui.account);
     } else {
       const loginResult = await login({"email": email, "password": password})
-
-      if (loginResult?.data?.status === "success") {
-        localStorage.setItem('name', loginResult.data?.user?.name);
-        navigate(URLs.ui.account);
-      } else {
-        setIsError3(true);
-      }
+      localStorage.setItem('name', loginResult.data?.name);
+      navigate(URLs.ui.account);
     }
 
     // if (props.first === "Регистрация") {

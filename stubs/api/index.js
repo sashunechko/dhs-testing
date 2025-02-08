@@ -1,5 +1,3 @@
-import { authApi } from "../../__data__/service/main-api";
-
 const router = require('express').Router();
 
 router.get('/tests-data', (request, response) => {
@@ -22,6 +20,8 @@ router.post('/submit-enter', async (request, response) => {
   const data = request.body; 
 
   result = await login(data.email, data.password)
+
+  console.log(result)
 
   response.send(result);
 });
@@ -52,15 +52,6 @@ router.post('/gigaChat', async (request, response) => {
 })
 
 async function login(email, password) {
-
-  // const [login, loginRequest] = authApi.login()
-
-  // result = await login(email, password)
-
-  // console.log(result)
-
-  // return result
-
   const headers = new Headers();
   headers.append("projectkey", "dhs-testing_b9HlYWwyDYwZnJ95S3feAYHcm4X");
   headers.append("Content-Type", "application/json");
@@ -78,14 +69,8 @@ async function login(email, password) {
   };
 
   result = await fetch("https://antd-table-v2-backend.onrender.com/api/auth/login", requestOptions)
-    .then((response) => {
-      if (response.status == 200) {
-        result = response.json()
-        return {"status": "success", "user": {"name": result.name, "email": result.email}}
-      } else {
-        return {"status": "error", "message": response.json().message}
-      }
-    })
+    .then((response) => response.json())
+    .then((result) => result)
     .catch((error) => console.error(error));
 
   console.log(result)
@@ -94,15 +79,6 @@ async function login(email, password) {
 }
 
 async function registration(email, password) {
-
-  // const [register, registerRequest] = authApi.register()
-
-  // result = await register(email, password)
-
-  // console.log(result)
-
-  // return result
-
   const headers = new Headers();
   headers.append("projectkey", "dhs-testing_b9HlYWwyDYwZnJ95S3feAYHcm4X");
   headers.append("Content-Type", "application/json");
@@ -121,19 +97,13 @@ async function registration(email, password) {
   };
 
   result = await fetch("https://antd-table-v2-backend.onrender.com/api/auth/register", requestOptions)
-  .then((response) => {
-    if (response.status == 200) {
-      result = response.json()
-      return {"status": "success", "user": {"name": result.name, "email": result.email}}
-    } else {
-      return {"status": "error", "message": response.json().message}
-    }
-  })
-    .catch((error) => console.error(error));
+  .then((response) => response.json())
+  .then((result) => result)
+  .catch((error) => console.error(error));
 
-  console.log(result)
+console.log(result)
 
-  return result
+return result
 }
 
 async function getGigaChatAnswer(message) {
@@ -170,6 +140,10 @@ async function getGigaChatAnswer(message) {
     "stream": false,
     "update_interval": 0,
     "messages": [
+      {
+          "role": "system", 
+          "content": "Отвечай как психолог"
+      },
       {
         "role": "user",
         "content": message

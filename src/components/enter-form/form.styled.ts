@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 export const StyledForm = styled.div`
-    font-family: 'Inter';
+    /* font-family: 'Inter'; */
     padding-top: 180px;
     margin-bottom: 28px;
     align-items: center;
@@ -20,7 +20,7 @@ export const StyledBg = styled.div`
 `;
 
 export const StyledHeader = styled.h1`
-    font-family: 'Inter';
+    /* font-family: 'Inter'; */
     font-size: 36px;
     color: var(--main);
     padding-top: 42px;
